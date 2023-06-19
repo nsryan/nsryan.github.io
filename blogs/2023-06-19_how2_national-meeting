@@ -1,0 +1,108 @@
+---
+layout: default-blog
+title: Dive into the World of Nuclear Science: A Whirlwind Adventure at the National American Nuclear Society Conferences
+---
+
+<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Dive into the World of Nuclear Science: A Whirlwind Adventure at the National American Nuclear Society Conferences</a>
+					<ul class="icons">
+						<li><a href="https://twitter.com/nathan_ryancz" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/in/nathan-ryan-5a06b8193/"
+								class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/nsryan2" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.instagram.com/nathan_ry4/" class="icon brands fa-instagram"><span
+									class="label">Instagram</span></a></li>
+						<li><a href="https://orcid.org/0000-0002-5551-2818" class="icon brands fa-orcid"><span
+									class="label">Orcid</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h1>Hi, I’m Nathan<br /></h1>
+							<p>A Nuclear Engineering Grad student at the University of Illinois Urbana-Chapmaign</p>
+						</header>
+						<p>Self described recovering physics person working in the <a href="arfc.github.io">Advanced Reactors and Fuel Cycles group</a>.
+            But, hopefully, you're here to learn a little bit about what to do when attending your first national ANS meeting. This advice is 
+            probably generalizable to any conference, but maybe one of these days I'll make one of these for the Student Conference (which is 
+            a whole different beast).</p>
+						<p></p>
+						<p>If this is your first conference all together, good luck! I'll likely be around in some capacity, or I am more than happy to 
+            connect you to people I know at the meeting.</p>
+					</div>
+					<span class="image object">
+						<img src="images/maroon.JPG" alt="Nathan standing, arms folded, in a maroon shirt" style="height:80%;"/>
+					</span>
+				</section>
+
+
+				<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ipsum sed dolor</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<h3>Interdum aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+
+			</div>
+		</div>
