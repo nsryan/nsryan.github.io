@@ -1437,29 +1437,6 @@ ul.pagination {
     ul.pagination li:first-child {
       padding-right: 0; } }
 
-.tab-container {
-  width: 100%;
-  margin: 0 auto;
-  border: none;
-}
-
-.tabs {
-  display: flex;
-}
-
-.tab-button {
-  background-color: #f2f2f2;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.content {
-  display: none;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
 
 /* Table */
 .table-wrapper {
