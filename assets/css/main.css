@@ -1438,8 +1438,9 @@ ul.pagination {
       padding-right: 0; } }
 
 .tab-container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  border: none;
 }
 
 .tabs {
