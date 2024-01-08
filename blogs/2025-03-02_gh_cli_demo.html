@@ -1,0 +1,126 @@
+---
+layout: default
+title: GH CLI
+---
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<meta name="description" content="Nathan Ryan's blog about the github command line interface.">
+					<a class="logo">GitHub Command Line Interface</a>
+				</header>
+
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<p>By: Nathan Ryan</p>
+						<p>2025-03-02</p>
+						<p>This repo is intended as a demonstration for common Github Command Line Interface (CLI) uses, and covers how to install the CLI, checking out someone else's PR, creating issues and PRs, making a new repo, and cloning an existing repo. This demo assumes some familiarity with git and github; If you are unfamiliar with these tools, I suggest following the <a href="https://swcarpentry.github.io/git-novice/">git novice lesson</a> from Software Carpentry.</p> <strong>Do not fork or clone this repo before starting (that will be covered in the demonstration).</strong>
+						<p></p>
+						<p>I am by no means an expert with this tool, but I hope you can integrate it in to your workflow with my rudimentary example. This is based on (by based on I mean I copied a lot of the text I wrote and added snarky comments like this) a repo I made several years ago, you can find it <a href="https://github.com/nsryan2/gh_cli_example">here</a>.</p>
+					</div>
+					<!-- <span class="image object">
+						<img src="../images/uiuc_annual_2023.jpg" alt="Group of figures standing in front of a window overlooking a street holding one person with her arms akimbo." style="height:85%;"/>
+					</span> -->
+				</section>
+				<section id="banner">
+					<div class="content">
+
+						<h2>1. Installing the command line interface</h2>
+
+							Follow the existing guide to <a href="https://cli.github.com/manual/installation">install the CLI</a>.
+							You may also have to setup
+							<a href="https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">SSH keys</a> or some other form of <a href="https://docs.github.com/en/enterprise-server@3.0/authentication">authentication</a>
+							before this process works, but it's likely that if you
+							already use git and github on your machine you'll be
+							good to go.
+						<p></p>
+
+						<h2>2. Clone the repo</h2>
+
+							Using your command line, navigate to the place where you store your .git repositories, and run
+
+							<code>gh repo clone gh_cli_test</code>
+
+							This will clone the example repository to where you
+							are at in the command line. This isn't how I
+							typically clone repositories, but it is something
+							you can do so I wanted to highlight it. I haven't done any sort of investigation into how this method of cloning is different other than the fact that you only need the repo name, which is pretty nice now that I think about it... maybe I'll start using this feature more.
+						</p>
+
+						<p>
+						<h2>3. Enter the repo</h2>
+
+							<code>cd gh_cli_test</code>
+
+							Yeah, that's seriously a whole subsection in the readme I made years ago. I guess points for thoroughness?
+						<p></p>
+
+						<h2>4. Find out what issues and PRs there are</h2>
+
+							Ok, we're back to useful steps. These two commands are so helpful!
+
+							<code>gh pr list</code>
+							and
+							<code>gh issue list</code>
+
+							These commands generate a list of the issues or PRs that are active in the repo, and gives you their name, number, who made them, and what branch they are coming from in that person's fork. The issue command should result in something like:
+
+							<code>
+								Showing 1 of 1 open issue in nsryan2/gh_cli_example
+
+								#2  I found a bug    about 1 year ago
+							</code>
+						<p></p>
+
+						<h2>5. Check out Greg's PR</h2>
+
+							<code>gh pr checkout 1</code>
+
+							I use this command all the time. Working with others on code stored in GitHub means reviewing code from your collaborators, and this command will make a branch with the contents of the PR on your machine so that you can review/use it on your machine. You do need to know the number of the PR, but that's what the previous command is for!
+						</p>
+
+						<p>
+						<h2>6. Creating an issue</h2>
+
+							My next most used command for the interface has to be this one. You can create an issue directly from the command line.
+							<code>gh issue create -a"@me" --title "Bug 4” --body "Nothing works"</code>
+
+							There are other tags you can add to the base command of issue create, and my favorite is `--web`.
+							<code>gh issue create --web</code>
+							Where, instead of typing out the issue in your command line, it opens a new issue on GitHub for you to input your problem. This is particularly useful for the repositories I use that have issue templates.
+						<p></p>
+
+						<h2>7. Create a new PR</h2>
+
+							To do this, you'll need to be on a branch other than main.
+							<code>git checkout -b bug_fix</code>
+
+							Now try:
+							<code>gh pr create --assignee “nsryan2” --title "The new new new bug is fixed" --body "Everything works again"</code>
+							This will create a PR to the GitHub repository and and assign me to it.
+						<p></p>
+
+						<h2>8. Creating a new repo</h2>
+
+							The final one we'll go over in this demo is creating a new repository. <strong>NEVER CREATE A GIT REPO INSIDE AN EXISTING GIT REPO</strong>
+							<code> cd ..</code>
+							Ok, with that out of the way, run something like (you'll have to change the name of the repo to something that doesn't exist).
+							<code>gh repo create new_repo</code>
+						<p></p>
+
+						<h2>9. Other commands</h2>
+
+							This is by no means an exhaustive list of the commands you can do with the cli, you can find more in the <a href="https://cli.github.com/manual/gh">gh manual</a>!
+
+						</p>
+					<p>
+							Good luck, and happy coding!
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
