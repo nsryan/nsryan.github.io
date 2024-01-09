@@ -108,7 +108,7 @@ title: Conference Advice
 							Body
 						</p>
 						<div class="share-buttons">
-							<span>Share on:</span>
+							<span>Share on:  </span>
 							<button onclick="shareOnTwitter()">Twitter</button>
 							<button onclick="shareOnLinkedIn()">LinkedIn</button>
 							<button onclick="shareOnFacebook()">Facebook</button>
@@ -118,18 +118,16 @@ title: Conference Advice
 			</div>
 		</div>
 		<script>
-			// Get the current page URL
 			var currentPageURL = window.location.href;
 
-			// Functions to share on Twitter, Bluesky, and Instagram
 			function shareOnTwitter() {
-				var textToTweet = "Check out this awesome blog post!";
+				var textToTweet = "Check out this blog post by @nathan_ryancz";
 				var url = encodeURIComponent(currentPageURL);
 				window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
 			}
 
 			function shareOnLinkedIn() {
-				var textToLinkedIn = "Check out this awesome blog post!";
+				var textToLinkedIn = "Check out this blog post!";
 				var url = encodeURIComponent(currentPageURL);
 				window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
 			}
