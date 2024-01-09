@@ -96,7 +96,33 @@ title: Grad App Advice
 				<p>
 					By incorporating these insights into your graduate school journey, you can navigate the challenges and make the most of your research and academic endeavors.
 				</p>
+				<div class="share-buttons">
+					<span style="margin-right: 5px;">Share on: </span>
+					<button onclick="shareOnTwitter()">Twitter</button>
+					<button onclick="shareOnLinkedIn()">LinkedIn</button>
+					<button onclick="shareOnFacebook()">Facebook</button>
+				</div>
 			</div>
 		</section>
 	</div>
 </div>
+<script>
+	var currentPageURL = window.location.href;
+
+	function shareOnTwitter() {
+		var textToTweet = "Check out this blog post by @nathan_ryancz";
+		var url = encodeURIComponent(currentPageURL);
+		window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+	}
+
+	function shareOnLinkedIn() {
+		var textToLinkedIn = "Check out this blog post!";
+		var url = encodeURIComponent(currentPageURL);
+		window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+	}
+
+	function shareOnFacebook() {
+		var url = encodeURIComponent(currentPageURL);
+		window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+	}
+</script>

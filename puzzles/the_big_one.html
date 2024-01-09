@@ -26,10 +26,36 @@ title: The Big One
                 <p>By: Nathan Ryan</p>
                 <p>Last updated: 2024-01-5</p>
                 <p>This is a series of connected puzzles that require the previous puzzles to be completed totally (as well as either an encyclopedic knowledge of my eclectic interests or a google every now and then). The first two clues are on this page, but you have to go elsewhere on my website to get to the next part. Find the patterns, keep track of the clues, and let me know when you finish!</p>
+                <div class="share-buttons">
+                    <span style="margin-right: 5px;">Share on: </span>
+                    <button onclick="shareOnTwitter()">Twitter</button>
+                    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+                    <button onclick="shareOnFacebook()">Facebook</button>
+                </div>
             </div>
         </section>
     </div>
 </div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
 
 <section>
     <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Turning my professional website into a puzzle to increase the average engagement time beyond one blog 😆</p>&mdash; Nathan Ryan (@nathan_ryancz) <a href="https://twitter.com/nathan_ryancz/status/1736447919086010586?ref_src=twsrc%5Etfw">December 17, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

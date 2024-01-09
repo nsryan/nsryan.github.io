@@ -28,7 +28,7 @@ title: Advocacy on the Hill
 				<section id="banner">
 					<div class="content">
 						<p>This advice is pretty general to any situation you might find yourself as a technical person acting in a policy space. I hope they will give you a sense of what you're walking in to if it's your first time, and serve as a convenient reminder if it isn't.</p>
-						
+
 						<h2>1. Expectation Setting</h2>
 
                             From the start, you should ask the people you're meeting with what their time restrictions are. From a member, you’ll get maybe 15 minutes, staffers will probably get 30 minutes. Be on time (5 minutes early where possible), expect them to take a minute or two to be ready. Don’t chew gum. Have fun, there are gift shops in both the house (in Longworth near the cafeteria) and senate (between Derkson and something in the tunnel by the cafeteria).
@@ -69,7 +69,33 @@ title: Advocacy on the Hill
 						<p></p>
 					    <p>
 						</p>
+						<div class="share-buttons">
+							<span style="margin-right: 5px;">Share on: </span>
+							<button onclick="shareOnTwitter()">Twitter</button>
+							<button onclick="shareOnLinkedIn()">LinkedIn</button>
+							<button onclick="shareOnFacebook()">Facebook</button>
+						</div>
 					</div>
 				</section>
 			</div>
 		</div>
+		<script>
+			var currentPageURL = window.location.href;
+
+			function shareOnTwitter() {
+				var textToTweet = "Check out this blog post by @nathan_ryancz";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+			}
+
+			function shareOnLinkedIn() {
+				var textToLinkedIn = "Check out this blog post!";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+			}
+
+			function shareOnFacebook() {
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+			}
+		</script>
