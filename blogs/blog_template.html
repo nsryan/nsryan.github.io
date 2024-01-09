@@ -11,6 +11,18 @@ title: Conference Advice
 				<header id="header">
 					<meta name="description" content="Nathan Ryan's blog page with an important life-lesson or story that is hopefully informative and useful to you.">
 					<a class="logo">Title</a>
+					<style>
+						/* Style to align buttons in a row */
+						.share-buttons {
+							display: flex;
+							align-items: center;
+						}
+
+						/* Margin for buttons */
+						.share-buttons button {
+							margin-right: 10px;
+						}
+					</style>
 				</header>
 
 				<!-- Banner -->
@@ -95,7 +107,36 @@ title: Conference Advice
 					<p>
 							Body
 						</p>
+						<div class="share-buttons">
+							<span>Share on:</span>
+							<button onclick="shareOnTwitter()">Twitter</button>
+							<button onclick="shareOnBluesky()">Bluesky</button>
+							<button onclick="shareOnInstagram()">Instagram</button>
+						</div>
 					</div>
 				</section>
 			</div>
 		</div>
+		<script>
+			// Get the current page URL
+			var currentPageURL = window.location.href;
+
+			// Functions to share on Twitter, Bluesky, and Instagram
+			function shareOnTwitter() {
+				var textToTweet = "Check out this awesome blog post!";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+			}
+
+			function shareOnBluesky() {
+				var textToBluesky = "Check out this awesome blog post!";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('bluesky://post?message=' + textToBluesky + '%20' + url, '_blank');
+			}
+
+			function shareOnInstagram() {
+				var textToInstagram = "Check out this awesome blog post!";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://www.instagram.com/create/story/?text=' + textToInstagram + '&url=' + url, '_blank');
+			}
+		</script>
