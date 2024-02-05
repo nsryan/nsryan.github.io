@@ -50,13 +50,13 @@ title: Tile Word 1
 
             function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.empty)');
-            const correctAnswers = ['p','b','o','o','k','k','e','e','p','e','r','o','e','e','s','u','c','c','e','s','s','f','u','l','l','y','b','s','k','e','e','b','e','e','h','i','v','e','l','s','e','l','s','p','s','i','i','e','p','w','o','o','f','r','e','e','z','e','r','u','n','p','e','s','p','t','n','e','e','e','r','n','s','e','s','w','h','e','e','l','b','a','r','r','o','w'];
+            const correctAnswers = ['P','B','O','O','K','K','E','E','P','E','R','O','E','E','S','U','C','C','E','S','S','F','U','L','L','Y','B','S','K','E','E','B','E','E','H','I','V','E','L','S','E','L','S','P','S','I','I','E','P','W','O','O','F','R','E','E','Z','E','R','U','N','P','E','S','P','T','N','E','E','E','R','N','S','E','S','W','H','E','E','L','B','A','R','R','O','W'];
 
             let allCorrect = true;
             cells.forEach((cell, index) => {
                 if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
                 allCorrect = false;
-                cell.style.backgroundColor = 'red';
+                cell.style.backgroundColor = 'white';
                 } else {
                 cell.style.backgroundColor = 'white';
                 }
