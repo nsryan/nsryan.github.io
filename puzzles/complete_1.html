@@ -24,6 +24,9 @@ title: Tile Word 1
             .black {
             background-color: black;
             }
+            .empty {
+            text-align:center;
+            }
             .clue {
             float: left;
             margin-right: 20px;
@@ -46,7 +49,7 @@ title: Tile Word 1
             }
 
             function checkAnswers() {
-            const cells = document.querySelectorAll('td:not(.black)');
+            const cells = document.querySelectorAll('td:not(.empty)');
             const correctAnswers = ['p','b','o','o','k','k','e','e','p','e','r','o','e','e','s','u','c','c','e','s','s','f','u','l','l','y','b','s','k','e','e','b','e','e','h','i','v','e','l','s','e','l','s','p','s','i','i','e','p','w','o','o','f','r','e','e','z','e','r','u','n','p','e','s','p','t','n','e','e','e','r','n','s','e','s','w','h','e','e','l','b','a','r','r','o','w'];
 
             let allCorrect = true;
@@ -114,25 +117,25 @@ title: Tile Word 1
     <p>Like a crossword, but you have to place the words based on the few letters I have already given you. If you find a correct solution that I mark as incorrect, please reach out (I'm pretty sure I've eliminated duplicates)!</p>
     <div class="clue">
       <b>Word List</b><br>
-      1. Beekeeper
-      2. Bookkeeper
-      3. Sweetener
-      4. Freezer
-      5. Wheelbarrow
-      6. Pepper
-      7. Beehive
-      8. Successfully
-      9. Rebelliousness
-      10. Possession
+      1. Beekeeper <br>
+      2. Bookkeeper<br>
+      3. Sweetener<br>
+      4. Freezer<br>
+      5. Wheelbarrow<br>
+      6. Pepper<br>
+      7. Beehive<br>
+      8. Successfully<br>
+      9. Rebelliousness<br>
+      10. Possession<br>
     </div>
     <div class="clear"></div>
     <p></p>
     <table>
       <tr>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
@@ -146,18 +149,18 @@ title: Tile Word 1
       </tr>
       <tr>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">E</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
       </tr>
       <tr>
@@ -173,29 +176,29 @@ title: Tile Word 1
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">Y</td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
       </tr>
       <tr>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
       </tr>
       <tr>
         <td onclick="fillCell(this)">E</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
@@ -203,63 +206,63 @@ title: Tile Word 1
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">V</td>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
       </tr>
       <tr>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
       </tr>
       <tr>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">F</td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
@@ -267,18 +270,93 @@ title: Tile Word 1
         <td onclick="fillCell(this)">Z</td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">U</td>
       </tr>
       <tr>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">E</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">E</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="empty" onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)">E</td>
@@ -287,86 +365,11 @@ title: Tile Word 1
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
         <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">E</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">E</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
       </tr>
     </table>
 <p></p>
