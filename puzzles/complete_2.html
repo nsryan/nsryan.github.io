@@ -1,0 +1,332 @@
+---
+layout: default
+title: Tile Word 2
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's Tile Puzzle.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+            table {
+            border-collapse: collapse;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            }
+            td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            }
+            .black {
+            background-color: black;
+            }
+            .empty {
+            text-align:center;
+            }
+            .clue {
+            float: left;
+            margin-right: 20px;
+            }
+            .clear {
+            clear: both;
+            }
+            .hidden {
+            display: none;
+            }
+        </style>
+        <script>
+            function fillCell(cell) {
+            const currentText = cell.innerText.trim();
+            if (currentText === '') {
+                cell.innerText = prompt('Enter a letter');
+            } else {
+                cell.innerText = '';
+            }
+            }
+
+            function checkAnswers() {
+            const cells = document.querySelectorAll('td:not(.empty)');
+            const correctAnswers = ['L','S','T','E','E','R','A','G','E','E','E','R','B','A','T','T','E','R','I','E','S','A','T','E','T','E','T','U','G','R','E','A','T','E','S','T','I','E','L','T','R','M','E','O','A','W','U','T','R','E','A','T','I','S','E','T','T','R','E','A','T','S','R','R'];
+
+            let allCorrect = true;
+            cells.forEach((cell, index) => {
+                if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
+                allCorrect = false;
+                cell.style.backgroundColor = 'white';
+                } else {
+                cell.style.backgroundColor = 'green';
+                }
+            });
+
+            if (allCorrect) {
+                document.getElementById('successMessage').classList.remove('hidden');
+            } else {
+                alert('Incorrect or incomplete answers. Keep trying!');
+            }
+            }
+        </script>
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's Tile Word #1 Complete puzzle.">
+            <a class="logo">Tile Word Complete #2</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2024-02-04</p>
+                <p>Like a crossword, but you have to place the words based on the few letters I have already given you. The words, like in a game of scrabble, are all connected logically. If you find a correct solution that I mark as incorrect, please reach out (I'm pretty sure I've eliminated duplicates)!</p>
+                <div class="clue">
+                  <b>Word List</b><br>
+                  1. Greatest <br>
+                  2. Treatise<br>
+                  3. Steerage<br>
+                  4. Batteries<br>
+                  5. Resettle<br>
+                  6. Letterer<br>
+                  7. Retreats<br>
+                  8. Matter<br>
+                  9. Water<br>
+                  10. Gratuitous<br>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+    <div class="clear"></div>
+    <p></p>
+    <table>
+      <tr> <!-- First -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">T</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">R</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr><!-- Second -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">R</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- Third -->
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">I</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- Fourth -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">U</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- Fifth -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- Sixth -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">A</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- Seventh -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">L</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 8 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">R</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 9 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">A</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 10 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">R</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 11 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">T</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 12 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">S</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+      <tr> <!-- 13 -->
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">R</td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" onclick="fillCell(this)"></td>
+      </tr>
+    </table>
+<p></p>
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <div id="successMessage" class="hidden">
+      Congratulations! You have completed the puzzle.
+    </div>
+
+    </body>
+</section>
+
+<div class="share-buttons">
+    <span style="margin-right: 5px;">Share: </span>
+    <button onclick="shareOnTwitter()">Twitter</button>
+    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+    <button onclick="shareOnFacebook()">Facebook</button>
+</div>
+<p></p>
