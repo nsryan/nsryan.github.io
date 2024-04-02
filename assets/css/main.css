@@ -2282,6 +2282,6 @@ button,
 /* Margin for buttons */
 .share-buttons button {
   margin-right: 8px;
-  min-width: 110px;
+  min-width: 95px;
   max-width: 120px;
 }
