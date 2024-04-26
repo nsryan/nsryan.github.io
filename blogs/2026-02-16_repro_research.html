@@ -1,0 +1,123 @@
+---
+layout: default
+title: Reproducible Research
+---
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<meta name="description" content="Nathan Ryan's blog page with an important life-lesson or story that is hopefully informative and useful to you.">
+					<a class="logo">Reproducible Research</a>
+				</header>
+
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<p>By: Nathan Ryan</p>
+						<p>2026-02-16</p>
+						<p></p>
+						<p>In the same way we want our papers cited, we want our code used. It follows that a greater user base would translate to more work being published with your code and citing your work. Part of this means you need your code to be findable, but also approachable for new users.</p>
+					</div>
+					<!-- <span class="image object">
+						<img src="../images/uiuc_annual_2023.jpg" alt="Group of figures standing in front of a window overlooking a street holding one person with her arms akimbo." style="height:85%;"/>
+					</span> -->
+				</section>
+				<section id="banner">
+					<div class="content">
+						<p>
+							Start
+						<p></p>
+
+						<h2>1. Code sharing</h2>
+
+							Body
+						<p></p>
+
+						<h2>2. Licensing your work</h2>
+
+							<p>I am in no way a lawyer, but I would encourage you to think about licensing as something beyond the legal stuff that comes with it. Licensing tells people how they can interact with your work, and, especially in a world where you can see most of what I’m working on at any given time, having a simple license in place is a great first step to letting people know how I want them to attribute me. Beyond attribution, a license tells people information about your own responsibilities to them as users. Much of the scientific codes I have worked with are provided as-is, but the license is how you can establish the relationship between users and developers. One of the themes that I have and will continue to hit on in open science is sharing justification and thought behind your decisions.</p>
+							<p>This whole blog is about open science, but I recognize that not every field or every project makes sense to exist out in the open in their entireties. These projects can also benefit from licensing, even if they are private repositories on Github or exist only in your handwritten lab notebook. In such projects, a license governs how  collaborators extend or make public versions of your original work (you’ll see this referred to as copyleft or viral licensing, where derivatives or products are governed by the same licenses as the original work).</p>
+						</p>
+
+						<p>
+						<h2>3. Version control</h2>
+
+							Body
+						<p></p>
+
+						<h2>4. Documentation</h2>
+
+							Body
+						<p></p>
+
+						<h2>5. Reproducible lit reviews</h2>
+
+							Body
+						</p>
+						<p>
+						<h2>6. Publishing data</h2>
+
+							Body
+						<p></p>
+
+						<h2>7. JOSS</h2>
+
+							Body
+						<p></p>
+
+						<h2>8. </h2>
+
+							Body
+						<p></p>
+
+						<h2>9. </h2>
+
+							Body
+						</p>
+
+						<p>
+						<h2>10. </h2>
+
+							Body
+						<p></p>
+
+						<h2>11. </h2>
+
+							Body
+						</p>
+					<p>
+							Body
+						</p>
+						<div class="share-buttons">
+							<span style="margin-right: 5px;">Share:</span>
+							<button onclick="shareOnTwitter()">Twitter</button>
+							<button onclick="shareOnLinkedIn()">LinkedIn</button>
+							<button onclick="shareOnFacebook()">Facebook</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script>
+			var currentPageURL = window.location.href;
+
+			function shareOnTwitter() {
+				var textToTweet = "Check out this blog post by @nathan_ryancz";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+			}
+
+			function shareOnLinkedIn() {
+				var textToLinkedIn = "Check out this blog post!";
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+			}
+
+			function shareOnFacebook() {
+				var url = encodeURIComponent(currentPageURL);
+				window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+			}
+		</script>
