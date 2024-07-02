@@ -42,20 +42,21 @@ title: EVER Presentation
                 <h3>Cyclus</h3>
                 <p>Cyclus is an agent-based nuclear fuel cycle simulator that is incredibly versatile, one of the initial core developers (Professor Katy Huff) likes to say that, "Cyclus can be used to model any process from making a grilled-cheese to international nuclear fuel cycles." The software achieves this versatility through a series of generic archetypes that are primarily transaction based. Over the years, the user community and developers have created a litany of nuclear specific archetypes for everything from proliferation assessment to fuel burnup.</p>
                 <p></p>
+                <img src="../images/presentations/24_ornl_poster/cyclus_ecosystem.png" width="60%">
                 <h3>EVER Update</h3>
                 <p>The Enrichment Versatile non-Equilibrium Reactor (EVER) archetype, in its lowest fidelity case, functions almost exactly like the <a href="https://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor">Cycamore</a> reactor. To compare, we have deployed EVER with a Cycamore reactor using preferences to achieve the same result and a Cycamore reactor with a single input recipe.</p>
                 <p></p>
-                <img src="../images/ever_flow.png" width="450">
+                <img src="../images/presentations/24_ornl_poster/ever_flow.png" width="450">
                 <p>In this flow path, the user defines each fuel recipe based on external depletion calculations and brings that information to Cyclus.</p>
             </div>
         </section>
         <section>
             <div class="content">
                 <p>In the example deployment scenario, we deploy the Cycamore reactor alongside EVER for comparison in a simplified fuel cycle.</p>
-                <img src="../images/ever_map.png" width="850">
+                <img src="../images/presentations/24_ornl_poster/ever_map.png" width="850">
                 <p></p>
                 <p>We can confirm that the Cycamore reactor that uses preferences and EVER function individually by creating a scenario where they both start by accepting fresh UOx fuel, move to some other fuel (otr_u), and then back to fresh UOx. All told, we can track the total fabricated fuel and see the impact of these changes.</p>
-                <img src="../images/fabricated_fuel.png" width="850" height="600">
+                <img src="../images/presentations/24_ornl_poster/fabricated_fuel.png" width="850" height="600">
             </div>
         </section>
         <section>
