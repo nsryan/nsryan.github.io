@@ -23,18 +23,17 @@ title: EVER Presentation
         <!-- Banner -->
         <section id="banner">
             <div class="content">
-                <p>Presentation_date</p>
                 <p>This page is intended as a supplement to the poster presentation with references, additional diagrams, and information. You can find the archetype, and corresponding documentation, in the repository <a href="https://github.com/nsryan2/NEAR/">https://github.com/nsryan2/NEAR/</a>.</p>
 
                 <h3>References</h3>
                 <p>References for the poster in the order they appear.</p>
                 <ol>
-                    <li>Amanda M. Bachmann. “Investigation of the impacts of deploying reactors fueled by high-assay low enriched uranium”. Thesis. University of Illinois at Urbana-Champaign, Nov. 2023. url: https://hdl.handle.net/2142/121987 (visited on 06/03/2024).</li>
-                    <li>Scott A. Comes and Paul J. Turinsky. “OUT-OF-CORE FUEL CYCLE OPTIMIZATION FOR NONEQUILIBRIUM CYCLES.” English. In: Nuclear Technology 83.1 (1988), pp. 31–48. issn: 0029-5450. doi: 10.13182/NT88-A34173.</li>
-                    <li>Kathryn D. Huff et al. “Fundamental concepts in the Cyclus nuclear fuel cycle simulation framework”. In: Advances in Engineering Software 94 (Apr. 2016), pp. 46–59. issn: 0965-9978. doi: 10.1016/j.advengsoft.2016.01.014. url: https://www.sciencedirect.com/science/article/pii/S0965997816300229 (visited on 06/18/2024).</li>
-                    <li>NUCLEAR ENERGY AGENCY ORGANISATION FOR ECONOMIC CO-OPERATION and DEVELOPMENT. “Accelerator-driven Systems (ADS) and Fast Reactors (FR) in Advanced Nuclear Fuel Cycles: A Comparative Study”. en. url: https://www.oecd-nea.org/ndd/reports/2002/nea3109-ads.pdf.</li>
-                    <li>E.A. Schneider, C.G. Bathke, and M.R. James. “NFCSIM: A dynamic fuel burnup and fuel cycle simulation tool”. English. In: Nuclear Technology 151.1 (2005), pp. 35–50. issn: 0029-5450. doi: 10.13182/NT05-4.</li>
-                    <li>A. V. Skarbeli et al. “Quantification of the differences introduced by nuclear fuel cycle simulators in advanced scenario studies”. In: Annals of Nuclear Energy 137 (Mar.2020), p. 107160. issn: 0306-4549. doi: 10.1016/j.anucene.2019.107160. url: https://www.sciencedirect.com/science/article/pii/S030645491930670X (visited on 07/02/2024)</li>
+                    <li>Amanda M. Bachmann. “Investigation of the impacts of deploying reactors fueled by high-assay low enriched uranium”. Thesis. University of Illinois at Urbana-Champaign, Nov. 2023. url: <a href="https://hdl.handle.net/2142/121987">https://hdl.handle.net/2142/121987</a> (visited on 06/03/2024).</li>
+                    <li>Scott A. Comes and Paul J. Turinsky. “OUT-OF-CORE FUEL CYCLE OPTIMIZATION FOR NONEQUILIBRIUM CYCLES.” English. In: Nuclear Technology 83.1 (1988), pp. 31–48. issn: 0029-5450. doi: 10.13182/NT88-A34173. url: <a href="https://www.tandfonline.com/doi/abs/10.13182/NT88-A34173">https://www.tandfonline.com/doi/abs/10.13182/NT88-A34173</a></li>
+                    <li>Kathryn D. Huff et al. “Fundamental concepts in the Cyclus nuclear fuel cycle simulation framework”. In: Advances in Engineering Software 94 (Apr. 2016), pp. 46–59. issn: 0965-9978. doi: 10.1016/j.advengsoft.2016.01.014. url: <a href="https://www.sciencedirect.com/science/article/pii/S0965997816300229">https://www.sciencedirect.com/science/article/pii/S0965997816300229</a> (visited on 06/18/2024).</li>
+                    <li>NUCLEAR ENERGY AGENCY ORGANISATION FOR ECONOMIC CO-OPERATION and DEVELOPMENT. “Accelerator-driven Systems (ADS) and Fast Reactors (FR) in Advanced Nuclear Fuel Cycles: A Comparative Study”. en. url: <a href="https://www.oecd-nea.org/ndd/reports/2002/nea3109-ads.pdf">https://www.oecd-nea.org/ndd/reports/2002/nea3109-ads.pdf</a>.</li>
+                    <li>E.A. Schneider, C.G. Bathke, and M.R. James. “NFCSIM: A dynamic fuel burnup and fuel cycle simulation tool”. English. In: Nuclear Technology 151.1 (2005), pp. 35–50. issn: 0029-5450. doi: 10.13182/NT05-4. url: <a href="https://www.tandfonline.com/doi/abs/10.13182/NT05-4">https://www.tandfonline.com/doi/abs/10.13182/NT05-4</a></li>
+                    <li>A. V. Skarbeli et al. “Quantification of the differences introduced by nuclear fuel cycle simulators in advanced scenario studies”. In: Annals of Nuclear Energy 137 (Mar.2020), p. 107160. issn: 0306-4549. doi: 10.1016/j.anucene.2019.107160. url: <a href="https://www.sciencedirect.com/science/article/pii/S030645491930670X ">https://www.sciencedirect.com/science/article/pii/S030645491930670X</a>. (on 07/02/2024)</li>
                 </ol>
             </div>
         </section>
@@ -43,11 +42,15 @@ title: EVER Presentation
                 <h3>EVER Update</h3>
                 <p>The Enrichment Versatile non-Equilibrium Reactor (EVER) archetype, in its lowest fidelity case, functions almost exactly like the <a href="https://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor">Cycamore</a> reactor. To compare, we have deployed EVER with a Cycamore reactor using preferences to achieve the same result and a Cycamore reactor with a single input recipe.</p>
                 <p></p>
-                <iframe src="../images/ever_map.svg" width="850" height="600"></iframe>
+                <iframe src="../images/ever_flow.png" width="850" height="200"></iframe>
+                <p>In this flow path, the user defines </p>
             </div>
         </section>
         <section>
             <div class="content">
+                <p>In the example deployment scenario, we deploy the Cycamore reactor alongside EVER for comparison in a simplified fuel cycle.</p>
+                <iframe src="../images/ever_map.png" width="850" height="600"></iframe>
+                <p></p>
                 <p>We can confirm that the Cycamore reactor that uses preferences and EVER function individually by creating a scenario where they both start by accepting fresh UOx fuel, move to some other fuel (otr_u), and then back to fresh UOx. All told, we can track the total fabricated fuel and see the impact of these changes.</p>
                 <iframe src="../images/fabricated_fuel.png" width="850" height="600"></iframe>
             </div>
