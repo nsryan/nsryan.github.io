@@ -23,6 +23,10 @@ title: EVER Presentation
         <!-- Banner -->
         <section id="banner">
             <div class="content">
+                <section>
+                <p>place holder for poster</p>
+                <iframe src="../images/banana.JPG" width="85%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </section>
                 <p>This page is intended as a supplement to the poster presentation with references, additional diagrams, and information. You can find the archetype, and corresponding documentation, in the repository <a href="https://github.com/nsryan2/NEAR/">https://github.com/nsryan2/NEAR/</a>.</p>
                 <p></p>
                 <h2>References</h2>
@@ -44,15 +48,17 @@ title: EVER Presentation
                 <p></p>
                 <img src="../images/presentations/24_ornl_poster/cyclus_ecosystem.png" width="60%">
                 <h3>EVER</h3>
-                <p>The <a href="https://github.com/nsryan2/NEAR/tree/main/EVER">Enrichment Versatile non-Equilibrium Reactor (EVER)</a> archetype, in its lowest fidelity case, functions almost exactly like the <a href="https://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor">Cycamore</a> reactor. To compare, we have deployed EVER with a Cycamore reactor using preferences to achieve the same result and a Cycamore reactor with a single input recipe.</p>
+                <p>The <a href="https://github.com/nsryan2/NEAR/tree/main/EVER">Enrichment Versatile non-Equilibrium Reactor (EVER)</a> archetype, in its lowest fidelity case, functions almost exactly like the <a href="https://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor">Cycamore</a> reactor. To compare, we have deployed EVER with a Cycamore reactor using preferences to achieve the same result and a Cycamore reactor with a single input recipe. In this flow path, the user defines each fuel recipe based on external depletion calculations and brings that information to Cyclus.</p>
                 <p></p>
                 <img src="../images/presentations/24_ornl_poster/ever_flow.png" width="65%">
-                <p>In this flow path, the user defines each fuel recipe based on external depletion calculations and brings that information to Cyclus.</p>
                 <p></p>
                 <h3>CLOVER</h3>
-                <p>The <a href="https://github.com/nsryan2/NEAR/tree/main/CLOVER">Core LOading Versatile non-Equilibrium Reactor (CLOVER)</a> archetype, in its lowest fidelity case, introduces a new capability to Cyclus by allowing the user explicit control over assemblies inside of a particular batch of fuel entering a reactor core. From the users perspective, this lowest fidelity functionality will behave as</p>
+                <p>The <a href="https://github.com/nsryan2/NEAR/tree/main/CLOVER">Core LOading Versatile non-Equilibrium Reactor (CLOVER)</a> archetype, in its lowest fidelity case, introduces a new capability to Cyclus by allowing the user explicit control over assemblies inside of a particular batch of fuel entering a reactor core. The user interacts with this lowest fidelity functionality will by defining the recipe they want to apply to each fuel assembly, and the location of each assembly. Then they define the times at which the reactor will move to the next configuration, and are able to run the simulation like normal from there.</p>
                 <img src="../images/presentations/24_ornl_poster/clover_flow.png" width="60%">
+                <h3>NEAR</h3>
+                <p>The end-goal of this work is to create the Non-Equilibrium Archetypal Reactor (NEAR), which will allow users to take advantage of both features simultaneously.</p>
             </div>
+
         </section>
         <section>
             <div class="content">
@@ -62,10 +68,6 @@ title: EVER Presentation
                 <p>We can confirm that the Cycamore reactor that uses preferences and EVER function individually by creating a scenario where they both start by accepting fresh UOx fuel, move to some other fuel (otr_u), and then back to fresh UOx. All told, we can track the total fabricated fuel and see the impact of these changes.</p>
                 <img src="../images/presentations/24_ornl_poster/fabricated_fuel.png" width="85%">
             </div>
-        </section>
-        <section>
-            <p>place holder for poster</p>
-            <iframe src="../images/banana.JPG" width="850" height="600" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </section>
     </div>
 </div>
