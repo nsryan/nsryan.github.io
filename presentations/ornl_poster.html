@@ -44,8 +44,9 @@ title: EVER Presentation
         <section id="banner">
             <div class="content">
                 <h2>The Nuclear Fuel Cycle</h2>
-                <p>The nuclear fuel cycle describes everything that happens to nuclear fuel and its supporting components from cradle to grave.A once-through fuel cycle (what we have for commercial fuel in the US) does not incorporate recycling, and has the fuel come from the mine and go through preparation facilities before being used in a reactor and disposed of.</p>
+                <p>The nuclear fuel cycle describes everything that happens to nuclear fuel and its supporting components from cradle to grave.A once-through fuel cycle (what we have for commercial fuel in the US) does not incorporate recycling, and has the fuel come from the mine and go through preparation facilities before being used in a reactor and disposed of. This is not the only fuel cycle, other countries recycle their fuel by incorporating a step called reprocessing.</p>
                 <img src="../images/presentations/24_ornl_poster/once_through.png" width="70%">
+                <p></p>
             </div>
         </section>
         <section id="banner">
@@ -70,7 +71,12 @@ title: EVER Presentation
         <section>
             <div class="content">
                 <h2>Example Scenario</h2>
-                <p>In the example deployment scenario, we deploy the Cycamore reactor alongside EVER for comparison in a simplified fuel cycle.</p>
+                <p>In the example deployment scenario, we deploy the Cycamore reactor alongside EVER for comparison in a simplified fuel cycle. The three reacotors deployed in this scenario have slightly different roles:</p>
+                <ol>
+                    <li>"Base_Reactor" is a classic, once recipe, deployment of the cycamore reactor.</li>
+                    <li>"Base_Pref_Reactor" uses preferences to toggle between a lower and higher enrichment fuel to achieve the variation from EVER.</li>
+                    <li>"EVER_Update_Reactor" is the EVER reactor, which toggles fuel recipes at the same time as the preference reactor.</li>
+                </ol>
                 <img src="../images/presentations/24_ornl_poster/ever_map.png" width="85%">
                 <p></p>
                 <p>We can confirm that the Cycamore reactor that uses preferences and EVER function individually by creating a scenario where they both start by accepting fresh UOx fuel, move to some other fuel (HALEU), and then back to fresh UOx. All told, we can track the total fabricated fuel and see the impact of these changes.</p>
