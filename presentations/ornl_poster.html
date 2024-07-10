@@ -73,9 +73,18 @@ title: EVER Presentation
         <section id="banner">
             <div class="content">
                 <h2>Cyclus</h2>
-                <p>Cyclus is an agent-based nuclear fuel cycle simulator that is incredibly versatile, one of the initial core developers (Professor Katy Huff) likes to say that, "Cyclus can be used to model any process from making a grilled-cheese to international nuclear fuel cycles." The software achieves this versatility through a series of generic archetypes that are primarily transaction based. Over the years, the user community and developers have created a litany of nuclear specific archetypes for everything from proliferation assessment to fuel burnup, our contribution to the ecosystem falls under this category with EVER and CLOVER.</p>
+                <p>Learn more about Cyclus from its website <a href="https://fuelcycle.org/">https://fuelcycle.org/</a>.</p>
                 <p></p>
-                <img src="../images/presentations/24_ornl_poster/cyclus_ecosystem.png" width="90%">
+                <p>Cyclus is an agent-based nuclear fuel cycle simulator that is incredibly versatile, one of the initial core developers (Professor Katy Huff) likes to say that, "Cyclus can be used to model any process from making a grilled-cheese to international nuclear fuel cycles." The software achieves this versatility through a series of generic archetypal facilities (called archetypes) that users can adapt to fit their needs.</p>
+                <p>Over the years, the user community and developers have created a litany of nuclear specific archetypes for everything from proliferation assessment to fuel burnup, our contribution to the ecosystem falls under this category with EVER and CLOVER.</p>
+                <img src="../images/presentations/24_ornl_poster/cyclus_ecosystem.png" width="60%">
+                <p>The Cyclus Ecosystem is comprised of a center (or core) set of repositories that make up the software.</p>
+                <ul>
+                    <li>Cycamore is a repository that contains generic versions of the types of facilities you would expect to find in a fuel cycle. </li>
+                    <li>Cyclus is the core of the software, around which everything is built.</li>
+                    <li>Cymetric is a largely python-based set of codes that help users analyze their results.</li>
+                </ul>
+                <p></p>
                 <h3>EVER</h3>
                 <p>The <a href="https://github.com/nsryan2/NEAR/tree/main/EVER">Enrichment Versatile non-Equilibrium Reactor (EVER)</a> archetype, in its lowest fidelity case, functions almost exactly like the <a href="https://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor">Cycamore</a> reactor. To compare, we have deployed EVER with a Cycamore reactor using preferences to achieve the same result and a Cycamore reactor with a single input recipe. In this flow path, the user defines each fuel recipe based on external depletion calculations and brings that information to Cyclus.</p>
                 <p></p>
