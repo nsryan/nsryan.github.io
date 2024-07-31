@@ -18,14 +18,14 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 				<section id="banner">
 					<div class="content">
 						<p>By: Nathan Ryan</p>
-						<p>2025-12-04</p>
-						<p>Why did I write this? Well, I saw one of my twitter mutuals respond to a post asking, “what’s the spherical cow of your subfield of physics,” and it got me thinking what that would mean in Nuclear. Yes, I’m still calling it Twitter; I write these way in advance and this blog was drafted not long after the name change.</p>
+						<!-- <p>2025-12-04</p> -->
+						<p>Why did I write this? Well, I saw one of my mutuals respond to a post asking, “what’s the spherical cow of your subfield of physics,” and it got me thinking what that would mean in nuclear.</p>
 
 						<p>If you’re not familiar with the concept of the spherical cow, allow me to introduce you to Moop!</p>
 						<p></p>
 					</div>
 					<span class="image object">
-						<img src="../images/moop.png" alt="Group of figures standing in front of a window overlooking a street holding one person with her arms akimbo." style="height:85%;"/>
+						<img src="../images/moop.png" alt="Group of figures standing in front of a window overlooking a street holding one person with her arms akimbo." style="height:55%;"/>
 					</span>
 				</section>
 				<section id="banner">
@@ -58,7 +58,7 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 
 						<p>I’m going to grossly misquote one of my math professors here: the number of analytically solvable differential equations is countably small (she may have meant distinct, or maybe just in the time we had in class), and, when your degree is based around solving problems analytically, this is a huge bottleneck. But, under the right circumstances, what’s really the difference between a spherical cow and the normal one that our parents tried to tip back in the day? Not much!</p>
 
-						<p>Why is moop an effective tool? Well, when the assumptions that get us there are well-understood, we can pick apart the dominant physics of a problem. So when I see these approximations I ask myself three things:
+						<p>Why is Moop an effective tool? Well, when the assumptions that get us there are well-understood, we can pick apart the dominant physics of a problem. So when I see these approximations I ask myself three things:
 						<ol>
 							<li>What is the dominant behavior we are trying to examine?</li>
 							<li>Are the current approximations being made fair?</li>
@@ -78,10 +78,13 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 						<p>These two geometries allow you to visualize very rough cases in 1, 2, and 3 dimensions for either transport or diffusion problems. You can examine how neutrons will behave in either a roughly defined space by stringing together slabs or a bunch of points. More importantly, you can set up boundary conditions to look at things like shielding for just outside a reactor, or the activity of the reactor pressure vessel. The power of these two spherical cows is we can see how the neutronics will interact with materials, health statutes, and cooling requirements with something you can solve analytically (in many cases, maybe not all of them).</p>
 
 						<h3>Fuel Cycles</h3>
-						<p>things</p>
+						<p>Most of the fuel cycles work I have done is transaction-based, with that in mind, you'll notice that most of my examples here involve keeping track of where fuel is traded to. To validate with back-of-the-envelope calculations, I will often make toy simulations that are A-B-C (source-facility/process-sink). This can be used at any level of fuel cycle analysis, inside a single facility or between ,facilities.</p>
+						<p>Another spherical cow in fuel cycles is when we make models that have one design and one fuel type. The reality of our fleet of reactors is that there are several designs, using fuel from a couple of companies. Depending on the metrics you are using to evaluate the fuel cycle, and the level of detail you're going into, these differences can fall within understandable uncertainty.</p>
+						<p>The final example we'll cover here is the abstraction of geographical informational data. For similar reasons as the reactor design, there are cases (like if you are tracking fuel composition leaving a reactor or separative work units) where the time it takes to transport fuel from fabrication to a reactor is a detail you can incorporate in successive rounds of inquiry.</p>
 
+						<!--
 						<h3>Thermal Hydraulics</h3>
-						<p>things</p>
+						<p>things</p> -->
 
 						<h3>Outreach</h3>
 						<p>Outreach spherical cows are a little different than the ones we might expect in a class or model; in outreach we’re trying to give a non-expert a foothold for a broad subject, something they are already familiar with, to guide both their understanding and the conversation. One of the first abstractions of a nuclear power plant I learned for outreach in college was “the fancy tea pot.” Starting from this high level, slightly absurdist, picture of what’s going on gives people a foothold based in something they are intimately familiar with while talking about a nuclear power plant that they probably never have seen (and never will see) in their life. This spherical cow centers the conversation on the fuel and coolant, allowing you to expand to talk about the reactor pressure vessel or where the coolant goes in the system.</p>
@@ -95,11 +98,12 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 							<li>Figure out which boundaries work, and what behavior looks like at the boundary.</li>
 							<li>See which terms/components dominate behavior.</li>
 						</ol>
-						The next thing I’d argue you need to do is to identify what part of the process you are trying to get insight into
+						The next thing I’d argue you need to do is to identify what part of the process you are trying to get insight into. Are you trying to understand the behavior of a system, or are you trying to understand the behavior of a component? This will help you decide what the dominant physics are, and what you can afford to ignore.</p>
+						<p>To complete your approximation, you just need to decide what scale you're looking at. This is how you will know when you have gone too far and are starting to lose important details.</p>
 						</p>
 
-						<h2>When do we go too far</h2>
-						<p>There's gotta be a point right?</p>
+						<p></p>
+
 
 						<div class="share-buttons">
 							<span style="margin-right: 5px;">Share:</span>
