@@ -56,12 +56,12 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 							</math>
 						<p>and is now "a straight line with an infinite radius of curvature." Moop represents a tool that a lot of science requires... approximation.</p>
 
-						<p>I’m going to grossly misquote one of my math professors here: the number of analytically solvable differential equations is countably small (she may have meant distinct, or maybe just in the time we had in class), and, when your degree is based around solving problems analytically, this is a huge bottleneck. But, under the right circumstances, what’s really the difference between a spherical cow and the normal one that our parents tried to tip back in the day? Not much!</p>
+						<p>I’m going to grossly misquote one of my math professors here: the number of analytically solvable differential equations is countably small (she may have meant distinct, or maybe just in the time we had in class), and, when your degree is based around solving problems analytically, this is a huge bottleneck. Under the right circumstances, what really is the difference between a spherical cow and the normal one that our parents tried to tip back in the day? Not much!</p>
 
-						<p>Why is Moop an effective tool? Well, when the assumptions that get us there are well-understood, we can pick apart the dominant physics of a problem. So when I see these approximations I ask myself three things:
+						<p>Why is Moop an effective tool? Well, when assumptions are well-understood, we can pick apart the dominant physics of a problem. So when I see these approximations I ask myself three things:
 						<ol>
 							<li>What is the dominant behavior we are trying to examine?</li>
-							<li>Are the current approximations being made fair?</li>
+							<li>Are the current approximations fair?</li>
 							<li>Is there a way to do the same with less or more approximation?</li>
 						</ol>
 						This sort of reflection is something my professors always encouraged, but I didn’t often follow through on at the time. I don’t think I’ve earned the right to be contemplative, after all it was only a couple years ago, but this is something I have picked up to make me more effective as a researcher. All of this to say, I hope the spherical cow is not a new concept, but I have a newfound appreciation for it.
@@ -78,7 +78,7 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 						<p>These two geometries allow you to visualize very rough cases in 1, 2, and 3 dimensions for either transport or diffusion problems. You can examine how neutrons will behave in either a roughly defined space by stringing together slabs or a bunch of points. More importantly, you can set up boundary conditions to look at things like shielding for just outside a reactor, or the activity of the reactor pressure vessel. The power of these two spherical cows is we can see how the neutronics will interact with materials, health statutes, and cooling requirements with something you can solve analytically (in many cases, maybe not all of them).</p>
 
 						<h3>Fuel Cycles</h3>
-						<p>Most of the fuel cycles work I have done is transaction-based, with that in mind, you'll notice that most of my examples here involve keeping track of where fuel is traded to. To validate with back-of-the-envelope calculations, I will often make toy simulations that are A-B-C (source-facility/process-sink). This can be used at any level of fuel cycle analysis, inside a single facility or between ,facilities.</p>
+						<p>Most of the fuel cycles work I have done is transaction-based, so my examples here involve keeping track of where fuel is traded to. To validate with back-of-the-envelope calculations, I will often make toy simulations that are A-B-C (source-facility/process-sink). This can be used at any level of fuel cycle analysis, inside a single facility or between facilities.</p>
 						<p>Another spherical cow in fuel cycles is when we make models that have one design and one fuel type. The reality of our fleet of reactors is that there are several designs, using fuel from a couple of companies. Depending on the metrics you are using to evaluate the fuel cycle, and the level of detail you're going into, these differences can fall within understandable uncertainty.</p>
 						<p>The final example we'll cover here is the abstraction of geographical informational data. For similar reasons as the reactor design, there are cases (like if you are tracking fuel composition leaving a reactor or separative work units) where the time it takes to transport fuel from fabrication to a reactor is a detail you can incorporate in successive rounds of inquiry.</p>
 
@@ -99,7 +99,7 @@ description: Nathan Ryan's blog about the nuclear spherical cow, and using appro
 							<li>See which terms/components dominate behavior.</li>
 						</ol>
 						The next thing I’d argue you need to do is to identify what part of the process you are trying to get insight into. Are you trying to understand the behavior of a system, or are you trying to understand the behavior of a component? This will help you decide what the dominant physics are, and what you can afford to ignore.</p>
-						<p>To complete your approximation, you just need to decide what scale you're looking at. This is how you will know when you have gone too far and are starting to lose important details.</p>
+						<p>To complete your approximation, you just need to decide what scale you're looking at. This is how you will know when you have gone too far and are starting to lose important details. The final step is to put it in to action and refine as you go.</p>
 						</p>
 
 						<p></p>
