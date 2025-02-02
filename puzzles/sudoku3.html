@@ -1,0 +1,279 @@
+---
+layout: default
+title: Simple Sudoku 3
+description: Nathan Ryan's Simple Sudoku #3.
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's sudoku puzzle #3.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+            table {
+              border-collapse: collapse;
+            }
+            td {
+              width: 50px;
+              height: 50px;
+              border: 1px solid black;
+              text-align: center;
+              font-size: 20px;
+            }
+            .prefilled {
+              background-color: #eee;
+            }
+            .userInput {
+              background-color: #fff;
+            }
+            #checkButton {
+              /* Add your button styling here */
+              padding: 10px;
+              font-size: 16px;
+              background-color: #3498db;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+            #checkButton:hover {
+              background-color: #2980b9;
+            }
+
+            #sudokuTable {
+              border-collapse: collapse;
+            }
+
+            #sudokuTable td {
+              width: 40px;
+              height: 40px;
+              text-align: center;
+              border: 2px solid black;
+              font-weight: bold;
+            }
+
+            /* Apply thicker borders for every 3rd row and column */
+            #sudokuTable tr:nth-child(3n) td {
+              border-bottom-width: 4px;
+            }
+
+            #sudokuTable td:nth-child(3n) {
+              border-right-width: 4px;
+            }
+          </style>
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's Simple Sudoku #1 Crossword puzzle.">
+            <a class="logo">Simple Sudoku #3</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2025-02-2</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+    <table id="sudokuTable">
+        <tr>
+          <td class="prefilled">3</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">5</td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">3</td>
+          <td class="userInput"></td>
+          <td class="prefilled">4</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="prefilled">8</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">7</td>
+          <td class="prefilled"></td>
+          <td class="prefilled">3</td>
+          <td class="userInput"></td>
+          <td class="prefilled">2</td>
+        </tr>
+            <tr>
+          <td class="prefilled">5</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">8</td>
+          <td class="prefilled">9</td>
+          <td class="prefilled">1</td>
+          <td class="prefilled">2</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">6</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">9</td>
+          <td class="prefilled">1</td>
+        </tr>
+        <tr>
+          <td class="prefilled">9</td>
+          <td class="userInput"></td>
+          <td class="prefilled">8</td>
+          <td class="prefilled">4</td>
+          <td class="userInput"></td>
+          <td class="prefilled">3</td>
+          <td class="prefilled">5</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="prefilled">2</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">7</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">6</td>
+          <td class="prefilled">1</td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="prefilled">1</td>
+          <td class="userInput"></td>
+          <td class="prefilled">9</td>
+          <td class="userInput"></td>
+          <td class="prefilled">3</td>
+          <td class="prefilled">2</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+        </tr>
+        <tr>
+          <td class="userInput"></td>
+          <td class="prefilled">5</td>
+          <td class="prefilled">6</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">8</td>
+          <td class="userInput"></td>
+          <td class="userInput"></td>
+          <td class="prefilled">3</td>
+        </tr>
+      </table>
+
+      <p>Best to play by the normal rules, I always say.</p>
+
+      <button id="checkButton" style="display: none;"><a href="../puzzles.html">Congrats, check out another puzzle!</a></button>
+
+      <p></p>
+      <p></p>
+
+
+
+      <script>
+        const cells = document.querySelectorAll('.userInput');
+        const tableRows = document.querySelectorAll('tr');
+        const expectedRowSums = [45, 45, 45, 45, 45, 45, 45, 45, 45]; // Define your expected row sums here
+
+        cells.forEach(cell => {
+          cell.addEventListener('click', function() {
+            const userInput = prompt('Enter a number (1-9):');
+            if (userInput !== null) {
+              const parsedInput = parseInt(userInput);
+              if (!isNaN(parsedInput) && parsedInput >= 1 && parsedInput <= 9) {
+                this.textContent = userInput;
+                checkRows();
+              } else {
+                alert('Please enter a valid number between 1 and 9.');
+              }
+            }
+          });
+        });
+
+        function checkRows() {
+          const rowSums = [];
+          tableRows.forEach(row => {
+            let sum = 0;
+            row.querySelectorAll('.userInput, .prefilled').forEach(cell => {
+              const cellValue = parseInt(cell.textContent);
+              if (!isNaN(cellValue)) {
+                sum += cellValue;
+              }
+            });
+            rowSums.push(sum);
+          });
+
+          const checkButton = document.getElementById('checkButton');
+          if (rowSums.every((sum, index) => sum === expectedRowSums[index])) {
+            checkButton.style.display = 'block';
+          } else {
+            checkButton.style.display = 'none';
+          }
+
+          console.log('Row Sums:', rowSums); // Log row sums
+          console.log('Expected Sums:', expectedRowSums); // Log expected sums
+
+          const rowsMatchExpectedSums = rowSums.every((sum, index) => sum === expectedRowSums[index]);
+          if (rowsMatchExpectedSums) {
+            console.log('All rows match expected sums.');
+            checkButton.style.display = 'block';
+          } else {
+            console.log('Rows do not match expected sums.');
+            checkButton.style.display = 'none';
+          }
+        }
+      </script>
+
+<div class="share-buttons">
+    <span style="margin-right: 5px;">Share: </span>
+    <button onclick="shareOnTwitter()">Twitter</button>
+    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+    <button onclick="shareOnFacebook()">Facebook</button>
+</div>
+<p></p>
+</section>
