@@ -1,0 +1,377 @@
+---
+layout: default
+title: Simple Sudoku 3
+description: Nathan Ryan's Simple Sudoku #3.
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's sudoku puzzle #3.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f0f0f0;
+              margin: 0;
+              padding: 0;
+          }
+
+          .game-container {
+              width: 60%;
+              margin: 50px auto;
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          h1 {
+              text-align: center;
+              color: #333;
+          }
+
+          #equations {
+              margin-bottom: 15px;
+          }
+
+          .equation-container {
+              margin-bottom: 15px;
+              text-align: center;
+          }
+
+          .answer-section {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 10px;
+          }
+
+          .answer-section input {
+              width: 50%;
+              padding: 10px;
+              font-size: 18px;
+              text-align: center;
+          }
+
+          button {
+              width: 100%;
+              padding: 8px;
+              font-size: 18px;
+              cursor: pointer;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              border-radius: 5px;
+          }
+
+          button:hover {
+              background-color: #45a049;
+          }
+
+          #feedback {
+              text-align: center;
+              font-size: 18px;
+              font-weight: bold;
+          }
+
+          #next-page-button {
+              display: none;
+              margin-top: 10px;
+              background-color: #008CBA;
+          }
+
+          #next-page-button:hover {
+              background-color: #007B9E;
+          }
+      </style>
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's knockoff Thypher physics puzzle.">
+            <a class="logo">Knockoff Thypher</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2025-03-21</p>
+                <p>Checkout the real <a href="https://thypher.com/">Thypher</a> for daily puzzles much better than my knockoff. I made this as part of The Big One and decided to pull it out of context to share here.</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+  <div class="game-container">
+    <h1>Thypher: Solve the Equations</h1>
+    <p>Solve the following equations to guess the word based on the common variables with which they are associated.</p>
+
+    <!-- Display equations -->
+    <div id="equations">
+        <div class="equation-container">
+          <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id='equation1'>
+            <mfrac>
+              <mrow>
+                <mi>y</mi>
+              </mrow>
+              <mrow>
+                <mo>sin</mo>
+                <mrow>
+                  <mo stretchy="true" form="prefix">(</mo>
+                  <mi>k</mi>
+                  <mi>x</mi>
+                  <mo>−</mo>
+                  <mi>ω</mi>
+                  <mi>t</mi>
+                  <mo>+</mo>
+                  <mi>ɸ</mi>
+                  <mo stretchy="true" form="postfix">)</mo>
+                </mrow>
+              </mrow>
+            </mfrac>
+          </math>
+
+
+          <p></p>
+            <input type="text" id="answer1" placeholder="Your answer">
+        </div>
+        <div class="equation-container">
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id='equation2'>
+              <mfrac>
+                <mi>N</mi>
+                <mrow>
+                  <msub>
+                    <mi>f</mi>
+                    <mi>p</mi>
+                  </msub>
+                  <msub>
+                    <mi>n</mi>
+                    <mi>e</mi>
+                  </msub>
+                  <msub>
+                    <mi>f</mi>
+                    <mi>l</mi>
+                  </msub>
+                  <msub>
+                    <mi>f</mi>
+                    <mi>i</mi>
+                  </msub>
+                  <msub>
+                    <mi>f</mi>
+                    <mi>c</mi>
+                  </msub>
+                  <mi>L</mi>
+                </mrow>
+              </mfrac>
+            </math>
+            <p></p>
+            <input type="text" id="answer2" placeholder="Your answer">
+        </div>
+        <div class="equation-container">
+          <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id="equation3">
+            <mrow>
+              <mi>∇</mi>
+              <mi>x</mi>
+              <mover>
+                <mi>A</mi>
+                <mo accent="true">→</mo>
+              </mover>
+            </mrow>
+          </math>
+            <p></p>
+            <input type="text" id="answer3" placeholder="Your answer">
+        </div>
+    </div>
+    <div class="equation-container">
+          <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id="equation4">
+            <mrow>
+              <mo>sin</mo>
+              <mrow>
+                <mo stretchy="true" form="prefix">(</mo>
+                <mi>x</mi>
+                <mo stretchy="true" form="postfix">)</mo>
+              </mrow>
+              <mo>−</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mfrac>
+                <msup>
+                  <mi>x</mi>
+                  <mn>3</mn>
+                </msup>
+                <mn>6</mn>
+              </mfrac>
+              <mo>+</mo>
+              <mfrac>
+                <msup>
+                  <mi>x</mi>
+                  <mn>5</mn>
+                </msup>
+                <mn>120</mn>
+              </mfrac>
+            </mrow>
+          </math>
+            <p></p>
+            <input type="text" id="answer4" placeholder="Your answer">
+      </div>
+    <div class="equation-container">
+          <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id="equation5">
+            <mfrac>
+            <mi>V</mi>
+            <mi>I</mi>
+          </mfrac>
+        </math>
+            <p></p>
+            <input type="text" id="answer5" placeholder="Your answer">
+        </div>
+
+      <div class="equation-container">
+          <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML" id="equation6">
+            <mrow>
+              <mo>∫</mo>
+              <mfrac>
+                <mrow>
+                  <mi>∂</mi>
+                  <msub>
+                    <mi>Q</mi>
+                    <mrow>
+                      <mi>r</mi>
+                      <mi>e</mi>
+                      <mi>v</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mi>T</mi>
+              </mfrac>
+            </mrow>
+          </math>
+            <p></p>
+            <input type="text" id="answer6" placeholder="Your answer">
+        </div>
+
+
+    <!-- Submit button -->
+    <button onclick="checkAnswers()">Submit Answers</button>
+
+    <!-- Feedback section -->
+    <div id="feedback"></div>
+
+    <!-- Button that reveals when the user answers correctly -->
+    <button id="next-page-button" onclick="window.location.href='../puzzles.html'">Try Another Puzzle!</button>
+    </div>
+    </div>
+      <p></p>
+      <p></p>
+
+
+
+      <script>
+        // Correct answers for each equation
+        const correctAnswers = {
+            answer1: "A",
+            answer2: "R",
+            answer3: "B",
+            answer4: "O",
+            answer5: "R",
+            answer6: "S"
+        };
+
+        function checkAnswers() {
+            // Get the user's input
+            const answer1 = document.getElementById('answer1').value.toUpperCase();
+            const answer2 = document.getElementById('answer2').value.toUpperCase();
+            const answer3 = document.getElementById('answer3').value.toUpperCase();
+            const answer4 = document.getElementById('answer4').value.toUpperCase();
+            const answer5 = document.getElementById('answer5').value.toUpperCase();
+            const answer6 = document.getElementById('answer6').value.toUpperCase();
+
+            let feedback = '';
+            let correctCount = 0;
+
+            // Check answers
+            if (answer1 === correctAnswers.answer1) {
+                feedback += 'Equation 1: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 1: Incorrect. Try again.<br>';
+            }
+
+            if (answer2 === correctAnswers.answer2) {
+                feedback += 'Equation 2: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 2: Incorrect. Try again.<br>';
+            }
+
+            if (answer3 === correctAnswers.answer3) {
+                feedback += 'Equation 3: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 3: Incorrect. Try again.<br>';
+            }
+
+            if (answer4 === correctAnswers.answer4) {
+                feedback += 'Equation 4: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 4: Incorrect. Try again.<br>';
+            }
+
+            if (answer5 === correctAnswers.answer5) {
+                feedback += 'Equation 5: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 5: Incorrect. Try again.<br>';
+            }
+
+            if (answer6 === correctAnswers.answer6) {
+                feedback += 'Equation 6: Correct!<br>';
+                correctCount++;
+            } else {
+                feedback += 'Equation 6: Incorrect. Try again.<br>';
+            }
+
+            // Display feedback
+            document.getElementById('feedback').innerHTML = feedback;
+
+            // If all answers are correct, reveal the next page button
+            if (correctCount === 6) {
+                document.getElementById('next-page-button').style.display = 'block';
+            }
+        }
+    </script>
+
+<div class="share-buttons">
+    <span style="margin-right: 5px;">Share: </span>
+    <button onclick="shareOnTwitter()">Twitter</button>
+    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+    <button onclick="shareOnFacebook()">Facebook</button>
+</div>
+<p></p>
+</section>
