@@ -19,14 +19,11 @@ description: Nathan Ryan's blog page with a series of lessons learned from worki
 					<div class="content">
 						<p>By: Nathan Ryan</p>
 						<p>2025-07-05</p>
-						<p>I started this blog as a note on my computer during office hours I host for the Computational Resource Access Network (CRANE, a scientific computing boot camp taught by scientists for scientists in marginalized communities). Through CRANE we teach coding in Python from the ground up and get through algorithms and tools currently used in cutting-edge research.</p>
+						<p>I started this blog as a note on my computer during office hours I host for the Computational Resource Access Network (CRANE, a scientific computing boot camp taught by scientists for scientists). Through CRANE we teach coding in Python from the ground up and get through algorithms and tools currently used in cutting-edge research.</p>
 
 						<p>I am still learning, and this entry is as much for myself as anyone else (it forced me to write down some of the things that have worked for me when explaining coding concepts); however, I do hope that these explanations and analogies stand as good starts to the variety of concepts covered in CRANE.</p>
 
 						<p>You can learn more about CRANE through the website <a href="https://www.cranephysics.org" target="_blank">https://www.cranephysics.org</a></p>
-
-						<p>I heard my advisor in an interview once quote one of her collaborators in grad school saying, I went to the school of open source. I love this mentality about learning to code because getting hands-on experience is one of the best ways to learn. It ties in with another idea I’ve heard in various open-source forums, instead of accepting believe me, we should be training people to say show me. These two principles are core tenets of my approach to sharing what I’ve learned, and my attempts to learn going forward.
-						</p>
 					</div>
 					<span class="image object">
 						<img src="../images/uiuc_annual_2023.jpg" alt="Group of figures standing in front of a window overlooking a street holding one person with her arms akimbo." style="height:85%;"/>
@@ -34,6 +31,8 @@ description: Nathan Ryan's blog page with a series of lessons learned from worki
 				</section>
 				<section id="banner">
 					<div class="content">
+						<p>I heard my advisor in an interview once quote one of her collaborators in grad school saying, "I went to the school of open source." I love this mentality about learning to code because getting hands-on experience is one of the best ways to learn. It ties in with another idea I’ve heard in various open-source forums, instead of accepting "believe me", we should be training people to say "show me." These two principles are core tenets of my approach to sharing what I’ve learned, and my attempts to learn going forward.
+						</p>
 						<p>
 							Ok, let’s get into some of these analogies:
 						</p>
@@ -50,8 +49,8 @@ description: Nathan Ryan's blog page with a series of lessons learned from worki
 
 						<h2>2. Writing with LaTeX</h2>
 
-							<p>Analogy: LaTeX is like a Word doc, except you have complete control of everything.</p>
-							<p>LaTeX is a powerful typesetting software that lets you write equations, build bibliographies, add plots and figures, and more with a high level of control.</p>
+							<p>Analogy: LaTeX is like a Word doc, except you are making the blueprints.</p>
+							<p>LaTeX is a powerful typesetting tool that lets you write equations, build bibliographies, add plots and figures, and more with a high level of control. We use the analogy of a blueprint because people rarely look at the .tex file of a finished product, even though that's what the architects spend their time looking at to "create" the building. Someone else does the compiling of the building from the blueprint, in the case of LaTeX some program builds your pdf.</p>
 
 
 						<h2>3. Docstrings for functions</h2>
@@ -81,7 +80,7 @@ description: Nathan Ryan's blog page with a series of lessons learned from worki
 
 						<h2>7. Plot subfigures</h2>
 
-							<p>Analogy: Subfigures can be used like you’re adding new layers to a painting.</p>
+							<p>Analogy: Subfigures can be used like you’re adding new layers or regions to a painting.</p>
 
 							<p>They can also be plotted in different frames, but the idea of painting is how I have helped people understand different plotting objects and how they get combined.</p>
 						<p></p>
@@ -98,14 +97,28 @@ description: Nathan Ryan's blog page with a series of lessons learned from worki
 
 							<p>I have only taught introductory coding, so we don't go much further than this with classes, but I think this gives people a foothold into why a class might be useful.</p>
 
-						<!-- <h2>10. </h2>
+						<h2>10. Mesh Grids</h2>
 
-							Body
-						<p></p>
+						<p>Analogy: Mesh grids are like blank canvas you can layer information on top of.</p>
 
-						<h2>11. </h2>
+						<p>In CRANE we work through many coding concepts, but mesh grids are one of those things that we always get questions about. Talking about mesh grids as a canvas usually helps give students intuition about how to interact with them. I can't take credit for this analogy, it's how I was taught about mesh grids in my undergraduate introductory computer science course.</p>
 
-							Body -->
+						<h2>11. ODE vs PDE</h2>
+
+						<p>Computation and math are inexorably linked, and our students have a wide range of math background so we often have to think of different ways to condense the math from a topic. In our physics lessons, we go through how to solve equations numerically and I will often explain ODEs and PDEs with an analogy to driving a car.</p>
+
+						<p>Say you’re driving a car along a straight road at a constant velocity. You can tell us where the car is at just by knowing where it started and how long it’s been driving, right? That’s an Ordinary differential equation, we have enough information to link the position and time completely by a constant velocity.
+						</p>
+
+						<p>Now, let’s say you drive the car for so long that you hit a different speed limit. Now, for you to tell us where the car is, you need to know something about how far/long it drove at each speed. Now the position of the car depends on time and some distance information, which makes it partially depend on time and partially depend on distance.
+						</p>
+
+						<h2>12. 2nd order Runge-Kutta</h2>
+
+						<p>Analogy: RK2 is essentially where you weight the front and back end of a time step equally.*
+						</p>
+
+						<p>*I recognize this is a big simplification of the process, but as part of the explanation of the method I’ve found this was a helpful bit to add.</p>
 						</p>
 					<p>
 							I hope these analogies help you understand some of the concepts we cover in CRANE. I am always looking for new ways to explain things, so if you have any suggestions, please let me know!
