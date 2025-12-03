@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Knockoff Thypher #2
+title: Knockoff Thypher #3
 description: Nathan Ryan's Second Knockoff Thypher.
 ---
 
 <section>
     <header class="main">
-        <meta name="description" content="Nathan Ryan's second knockoff Thypher.">
+        <meta name="description" content="Nathan Ryan's third knockoff Thypher.">
         <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
         <style>
           .game-container {
@@ -49,6 +49,14 @@ description: Nathan Ryan's Second Knockoff Thypher.
           #next-page-button {
               display: none;
               margin-top: 10px;
+          }
+
+          .ascii-art {
+              display: none;
+              font-family: monospace;
+              white-space: pre;
+              margin-top: 20px;
+              text-align: center;
           }
       </style>
     </header>
@@ -97,160 +105,118 @@ description: Nathan Ryan's Second Knockoff Thypher.
                             </mrow>
                         </mfrac>
                     </math>
-                  <p></p>
+                    <p></p>
                     <input type="text" id="answer1" placeholder="Your answer">
                 </div>
-                <div class="equation-container">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mo>_</mo><mo>_</mo><mo>_</mo>
-                        <mo>(</mo><msup><mi>x</mi><mn>5</mn></msup><mo>)</mo><mo>=</mo><mi>s</mi><mi>i</mi><mi>n</mi><mi>h</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>-</mo><mi>x</mi><mo>-</mo><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mn>6</mn></mfrac>
-                    </math>
-                    <p></p>
-                    <input type="text" id="answer2" placeholder="Your answer">
-                </div>
-                <div class="equation-container">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mo>_</mo><mo>_</mo><mo>_</mo>
-                        <mo>=</mo><mfrac><mrow><msub><mtext>&#x3bc;</mtext><mtext>0</mtext></msub><mi>i</mi></mrow><mrow><mn>4</mn><mi>&#x3c0;</mi></mrow></mfrac><munderover accent='false' accentunder='false'><mo>&#x222e;</mo><mrow/><mrow/></munderover><mfrac><mover accent='true'><mrow><mi>d</mi><mi>l</mi></mrow><mo>&#x2192;</mo></mover><mi>r</mi></mfrac>
-                    </math>
+                <!-- More equations... -->
 
-                    <p></p>
-                    <input type="text" id="answer3" placeholder="Your answer">
-                </div>
-            <div class="equation-container">
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>_</mo><mo>_</mo><mo>_</mo><mo>=</mo><mfrac><mrow><mi>d</mi><msub><mi>q</mi><mrow><mi>r</mi><mi>e</mi><mi>v</mi></mrow></msub></mrow><mrow><mi>d</mi><mi>s</mi></mrow></mfrac></math>
-
-                    <p></p>
-                    <input type="text" id="answer4" placeholder="Your answer">
-              </div>
-            <div class="equation-container">
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>_</mo><mo>_</mo><mo>_</mo><mo>=</mo><mfrac><mi>&#x3c3;</mi><mi>&#x3b5;</mi></mfrac></math>
-
-                    <p></p>
-                    <input type="text" id="answer5" placeholder="Your answer">
-                </div>
-
-              <div class="equation-container">
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>_</mo><mo>_</mo><mo>_</mo><mo>=</mo><msub><mi>&#x3b5;</mi><mn>0</mn></msub><mi>E</mi><mo>+</mo><mi>P</mi></math>
-
-                    <p></p>
-                    <input type="text" id="answer6" placeholder="Your answer">
-                </div>
-
+            </div>
 
             <button onclick="checkAnswers()">Submit Answers</button>
 
             <div id="feedback"></div>
 
             <button id="next-page-button" onclick="window.location.href='../puzzles.html'">Try Another Puzzle!</button>
+
+            <div id="asciiArt" class="ascii-art">
+                <pre>
+                O
+              /   \
+          (O)---(O)---(O)
+              \   /
+                O
+                      __
+                     /  \
+                    / ..|\
+                   (_\  |_)
+                   /  \@'
+                  /     \
+                 /       \
+                /   (_____)
+               /_____/   U
+
+               Here's the Winter Goat, she says hi!
+                </pre>
+            </div>
+
           </div>
-              <p></p>
-              <p></p>
-
-
-
-              <script>
-                // Correct answers for each equation
-                const correctAnswers = {
-                    answer1: "G",
-                    answer2: "O",
-                    answer3: "A",
-                    answer4: "T",
-                    answer5: "E",
-                    answer6: "D"
-                };
-
-                function checkAnswers() {
-                    // Get the user's input
-                    const answer1 = document.getElementById('answer1').value.toUpperCase();
-                    const answer2 = document.getElementById('answer2').value.toUpperCase();
-                    const answer3 = document.getElementById('answer3').value.toUpperCase();
-                    const answer4 = document.getElementById('answer4').value.toUpperCase();
-                    const answer5 = document.getElementById('answer5').value.toUpperCase();
-                    const answer6 = document.getElementById('answer6').value.toUpperCase();
-
-                    let feedback = '';
-                    let correctCount = 0;
-
-                    // Check answers
-                    if (answer1 === correctAnswers.answer1) {
-                        feedback += 'Equation 1: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 1: Incorrect. Try again.<br>';
-                    }
-
-                    if (answer2 === correctAnswers.answer2) {
-                        feedback += 'Equation 2: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 2: Incorrect. Try again.<br>';
-                    }
-
-                    if (answer3 === correctAnswers.answer3) {
-                        feedback += 'Equation 3: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 3: Incorrect. Try again.<br>';
-                    }
-
-                    if (answer4 === correctAnswers.answer4) {
-                        feedback += 'Equation 4: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 4: Incorrect. Try again.<br>';
-                    }
-
-                    if (answer5 === correctAnswers.answer5) {
-                        feedback += 'Equation 5: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 5: Incorrect. Try again.<br>';
-                    }
-
-                    if (answer6 === correctAnswers.answer6) {
-                        feedback += 'Equation 6: Correct!<br>';
-                        correctCount++;
-                    } else {
-                        feedback += 'Equation 6: Incorrect. Try again.<br>';
-                    }
-
-                    // Display feedback
-                    document.getElementById('feedback').innerHTML = feedback;
-
-                    // If all answers are correct, reveal the next page button
-                    if (correctCount === 6) {
-                        document.getElementById('next-page-button').style.display = 'block';
-                    }
-                }
-            </script>
         </section>
-        <div class="share-buttons">
-          <span style="margin-right: 5px;">Share: </span>
-          <button onclick="shareOnTwitter()">Twitter</button>
-          <button onclick="shareOnLinkedIn()">LinkedIn</button>
-          <button onclick="shareOnFacebook()">Facebook</button>
-      </div>
-      <p></p>
     </div>
 </div>
+
 <script>
-    var currentPageURL = window.location.href;
+    // Correct answers for each equation
+    const correctAnswers = {
+        answer1: "G",
+        answer2: "O",
+        answer3: "A",
+        answer4: "T",
+        answer5: "E",
+        answer6: "D"
+    };
 
-    function shareOnTwitter() {
-        var textToTweet = "Check out this puzzle by @nathan_ryancz";
-        var url = encodeURIComponent(currentPageURL);
-        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
-    }
+    function checkAnswers() {
+        // Get the user's input
+        const answer1 = document.getElementById('answer1').value.toUpperCase();
+        const answer2 = document.getElementById('answer2').value.toUpperCase();
+        const answer3 = document.getElementById('answer3').value.toUpperCase();
+        const answer4 = document.getElementById('answer4').value.toUpperCase();
+        const answer5 = document.getElementById('answer5').value.toUpperCase();
+        const answer6 = document.getElementById('answer6').value.toUpperCase();
 
-    function shareOnLinkedIn() {
-        var textToLinkedIn = "Check out this puzzle!";
-        var url = encodeURIComponent(currentPageURL);
-        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
-    }
+        let feedback = '';
+        let correctCount = 0;
 
-    function shareOnFacebook() {
-        var url = encodeURIComponent(currentPageURL);
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+        // Check answers
+        if (answer1 === correctAnswers.answer1) {
+            feedback += 'Equation 1: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 1: Incorrect. Try again.<br>';
+        }
+
+        if (answer2 === correctAnswers.answer2) {
+            feedback += 'Equation 2: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 2: Incorrect. Try again.<br>';
+        }
+
+        if (answer3 === correctAnswers.answer3) {
+            feedback += 'Equation 3: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 3: Incorrect. Try again.<br>';
+        }
+
+        if (answer4 === correctAnswers.answer4) {
+            feedback += 'Equation 4: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 4: Incorrect. Try again.<br>';
+        }
+
+        if (answer5 === correctAnswers.answer5) {
+            feedback += 'Equation 5: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 5: Incorrect. Try again.<br>';
+        }
+
+        if (answer6 === correctAnswers.answer6) {
+            feedback += 'Equation 6: Correct!<br>';
+            correctCount++;
+        } else {
+            feedback += 'Equation 6: Incorrect. Try again.<br>';
+        }
+
+        // Display feedback
+        document.getElementById('feedback').innerHTML = feedback;
+
+        // If all answers are correct, reveal the next page button and ASCII art
+        if (correctCount === 6) {
+            document.getElementById('next-page-button').style.display = 'block';
+            document.getElementById('asciiArt').style.display = 'block';
+        }
     }
 </script>
