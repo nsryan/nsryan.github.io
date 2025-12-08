@@ -3,125 +3,145 @@ layout: default
 title: Panoply Puzzle
 description: Nathan Ryan's panoply puzzle for the holiday season.
 ---
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's Panoply Search Puzzle.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+                * {
+                    margin: 0;
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
 
-<style>
-        * {
-            margin: 0;
-            padding: 8px;
-            box-sizing: border-box;
-        }
+                .panoplycontainer {
+                    text-align: center;
+                    padding: 20px;
+                    background-color: white;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                }
 
-        .panoplycontainer {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
+                .row {
+                    margin-bottom: 10px;
+                    margin-left: 8px;
+                }
 
-        .row {
-            margin-bottom: 10px;
-            margin-left: 8px;
-        }
+                .input-container {
+                    margin-top: 20px;
+                }
 
-        .input-container {
-            margin-top: 20px;
-        }
+                #nextButton {
+                    display: none;
+                    margin-top: 20px;
+                }
 
-        #nextButton {
-            display: none;
-            margin-top: 20px;
-        }
+                .ascii-art {
+                    display: none;
+                    font-family: monospace;
+                    white-space: pre;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+        </style>
+    </header>
+</section>
 
-        .ascii-art {
-              display: none;
-              font-family: monospace;
-              white-space: pre;
-              margin-top: 20px;
-              text-align: center;
-          }
-    </style>
+<div id="main">
+    <div class="inner">
 
-<div class="panoplycontainer">
-    <h1>From the boulder down to __ town</h1>
-    <p>Fill in the blanks to find out who's missing from the Panoply! Symbols other than underscores are correlated to a single letter.</p>
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's Panoply Search puzzle.">
+            <a class="logo">Panoply Search Puzzle</a>
+        </header>
 
-    <div class="rows">
-        <div class="row">Z & _ _</div>
-        <div class="row">P + _ & _ D _ _</div>
-        <div class="row">% R & _</div>
-        <div class="row">% P @ ! + _ $ T &</div>
-        <div class="row">@ & R %</div>
-        <div class="row">% T @ & _ %</div>
-        <div class="row">% P + L * +</div>
-        <div class="row">% ! T & M $ _</div>
-        <div class="row">@ & P @ % & _ T U _</div>
-        <div class="row">@ & ! M & _</div>
-        <div class="row">_ $ + _ Y _ U _</div>
-    </div>
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2025-12-07</p>
+        <div class="panoplycontainer">
+            <h1>From the boulder down to __ town</h1>
+            <p>Fill in the blanks to find out who's missing from the Panoply! Symbols other than underscores are correlated to a single letter.</p>
 
-    <!-- Input field to check the name -->
-    <div class="input-container">
-        <label for="nameInput">Who's missing?</label>
-        <input type="text" id="nameInput" placeholder="Enter name">
-        <button id="checkButton" onclick="checkName()">Check</button>
-    </div>
-
-    <!-- Button to go to the next page -->
-    <button id="nextButton" onclick="goToNextPage()">Try Another One</button>
-
-    <div id="asciiArt" class="ascii-art">
-                <pre>
-
-                        ████        ████
-                ██▒▒██    ░░██▒▒██
-                ██▒▒██    ██▓▓▒▒██
-            ██▒▒██    ██▒▒▒▒██
-            ██▒▒██    ██▒▒▒▒██
-            ██▒▒██    ██▒▒▓▓██
-            ██▒▒██    ██▒▒▓▓██
-            ██████████████████
-        ██████              ░░░░██
-    ██  ██                    ████
-    ██  ░░██                        ██
-    ██░░░░██                      ██░░  ██
-    ██████                      ████░░░░██
-    ██                        ██  ████
-    ██      ██    ██          ██                                    ████
-    ██      ██    ██          ██                                  ██    ██
-    ██                          ██                                  ██    ██
-  ██░░                    ░░░░    ██████                            ██    ██
-  ██  ░░        ░░░░░░░░░░░░░░░░░░      ██████░░          ██████████    ██
-  ██            ░░░░░░░░░░▒▒██░░  ░░░░░░░░  ░░████████████  ░░        ██
-  ██            ░░░░░░░░░░▒▒██░░░░░░░░░░░░░░░░  ░░  ░░░░░░░░░░░░░░      ██
-  ██                  ░░██▒▒  ██░░            ░░                        ██
-  ██    ▒▒▒▒▒▒▒▒      ██        ██                                        ██
-    ██    ▒▒▒▒        ██        ██░░                                      ██
-      ██            ██          ██░░░░                                    ██
-        ██        ██            ██░░░░                                    ██
-          ██████████              ██░░░░                                  ██
-            ██░░░░██                ██░░░░                                ██
-            ██░░██                  ████░░░░    ░░░░░░░░░░░░░░░░░░░░      ██
-              ██                    ██░░████░░  ░░████████████████░░░░    ██
-                                    ██░░██  ██  ██          ██░░░░██░░░░  ██
-                                    ██░░██  ██  ██          ██░░░░░░██░░░░  ██
-                                    ██░░██  ██  ██            ██░░░░████░░  ██
-                                    ██░░██  ██  ██              ██░░██  ██  ██
-                                    ██░░██  ██  ██              ██░░██  ██░░██
-                                    ██░░██  ██  ██              ██░░██  ██░░██
-                                    ██████  ██████              ██████  ██████
-                                    ██░░██  ██▒▒██              ██▒▒██  ██▒▒██
-
-                  ░░░░░░░░░░░░░░░░░░    ░░░░  ░░░░░░░░░░░░▒▒
-
-
-                </pre>
-                <p>Here's the Winter Goat.</p>
-                <p>He says hi!</p>
+            <div class="rows">
+                <div class="row">Z & _ _</div>
+                <div class="row">P + _ & _ D _ _</div>
+                <div class="row">% R & _</div>
+                <div class="row">% P @ ! + _ $ T &</div>
+                <div class="row">@ & R %</div>
+                <div class="row">% T @ & _ %</div>
+                <div class="row">% P + L * +</div>
+                <div class="row">% ! T & M $ _</div>
+                <div class="row">@ & P @ % & _ T U _</div>
+                <div class="row">@ & ! M & _</div>
+                <div class="row">_ $ + _ Y _ U _</div>
             </div>
-</div>
 
+            <!-- Input field to check the name -->
+            <div class="input-container">
+                <label for="nameInput">Who's missing?</label>
+                <input type="text" id="nameInput" placeholder="Enter name">
+                <button id="checkButton" onclick="checkName()">Check</button>
+            </div>
+
+            <!-- Button to go to the next page -->
+            <button id="nextButton" onclick="goToNextPage()">Try Another One</button>
+
+            <div id="asciiArt" class="ascii-art">
+                        <pre>
+
+                                ████        ████
+                        ██▒▒██    ░░██▒▒██
+                        ██▒▒██    ██▓▓▒▒██
+                    ██▒▒██    ██▒▒▒▒██
+                    ██▒▒██    ██▒▒▒▒██
+                    ██▒▒██    ██▒▒▓▓██
+                    ██▒▒██    ██▒▒▓▓██
+                    ██████████████████
+                ██████              ░░░░██
+            ██  ██                    ████
+            ██  ░░██                        ██
+            ██░░░░██                      ██░░  ██
+            ██████                      ████░░░░██
+            ██                        ██  ████
+            ██      ██    ██          ██                                    ████
+            ██      ██    ██          ██                                  ██    ██
+            ██                          ██                                  ██    ██
+        ██░░                    ░░░░    ██████                            ██    ██
+        ██  ░░        ░░░░░░░░░░░░░░░░░░      ██████░░          ██████████    ██
+        ██            ░░░░░░░░░░▒▒██░░  ░░░░░░░░  ░░████████████  ░░        ██
+        ██            ░░░░░░░░░░▒▒██░░░░░░░░░░░░░░░░  ░░  ░░░░░░░░░░░░░░      ██
+        ██                  ░░██▒▒  ██░░            ░░                        ██
+        ██    ▒▒▒▒▒▒▒▒      ██        ██                                        ██
+            ██    ▒▒▒▒        ██        ██░░                                      ██
+            ██            ██          ██░░░░                                    ██
+                ██        ██            ██░░░░                                    ██
+                ██████████              ██░░░░                                  ██
+                    ██░░░░██                ██░░░░                                ██
+                    ██░░██                  ████░░░░    ░░░░░░░░░░░░░░░░░░░░      ██
+                    ██                    ██░░████░░  ░░████████████████░░░░    ██
+                                            ██░░██  ██  ██          ██░░░░██░░░░  ██
+                                            ██░░██  ██  ██          ██░░░░░░██░░░░  ██
+                                            ██░░██  ██  ██            ██░░░░████░░  ██
+                                            ██░░██  ██  ██              ██░░██  ██  ██
+                                            ██░░██  ██  ██              ██░░██  ██░░██
+                                            ██░░██  ██  ██              ██░░██  ██░░██
+                                            ██████  ██████              ██████  ██████
+                                            ██░░██  ██▒▒██              ██▒▒██  ██▒▒██
+
+                        ░░░░░░░░░░░░░░░░░░    ░░░░  ░░░░░░░░░░░░▒▒
+
+
+                        </pre>
+                        <p>Here's the Winter Goat.</p>
+                        <p>He says hi!</p>
+                    </div>
+        </div>
+</div>
+</section>
 
 <script>
     function checkName() {
