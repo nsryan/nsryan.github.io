@@ -62,6 +62,56 @@ description: Nathan Ryan's panoply puzzle for the holiday season.
     <button id="nextButton" onclick="goToNextPage()">Try Another One</button>
 </div>
 
+<div id="asciiArt" class="ascii-art">
+                <pre>
+
+                     ████        ████
+                ██▒▒██    ░░██▒▒██
+              ██▒▒██    ██▓▓▒▒██
+            ██▒▒██    ██▒▒▒▒██
+            ██▒▒██    ██▒▒▒▒██
+            ██▒▒██    ██▒▒▓▓██
+            ██▒▒██    ██▒▒▓▓██
+            ██████████████████
+      ██████              ░░░░██
+    ██  ██                    ████
+  ██  ░░██                        ██
+██░░░░██                      ██░░  ██
+  ██████                      ████░░░░██
+    ██                        ██  ████
+    ██      ██    ██          ██                                    ████
+    ██      ██    ██          ██                                  ██    ██
+    ██                          ██                                  ██    ██
+  ██░░                    ░░░░    ██████                            ██    ██
+  ██  ░░        ░░░░░░░░░░░░░░░░░░      ██████░░          ██████████    ██
+  ██            ░░░░░░░░░░▒▒██░░  ░░░░░░░░  ░░████████████  ░░        ██
+  ██            ░░░░░░░░░░▒▒██░░░░░░░░░░░░░░░░  ░░  ░░░░░░░░░░░░░░      ██
+  ██                  ░░██▒▒  ██░░            ░░                        ██
+  ██    ▒▒▒▒▒▒▒▒      ██        ██                                        ██
+    ██    ▒▒▒▒        ██        ██░░                                      ██
+      ██            ██          ██░░░░                                    ██
+        ██        ██            ██░░░░                                    ██
+          ██████████              ██░░░░                                  ██
+            ██░░░░██                ██░░░░                                ██
+            ██░░██                  ████░░░░    ░░░░░░░░░░░░░░░░░░░░      ██
+              ██                    ██░░████░░  ░░████████████████░░░░    ██
+                                    ██░░██  ██  ██          ██░░░░██░░░░  ██
+                                    ██░░██  ██  ██          ██░░░░░░██░░░░  ██
+                                    ██░░██  ██  ██            ██░░░░████░░  ██
+                                    ██░░██  ██  ██              ██░░██  ██  ██
+                                    ██░░██  ██  ██              ██░░██  ██░░██
+                                    ██░░██  ██  ██              ██░░██  ██░░██
+                                    ██████  ██████              ██████  ██████
+                                    ██░░██  ██▒▒██              ██▒▒██  ██▒▒██
+
+                  ░░░░░░░░░░░░░░░░░░    ░░░░  ░░░░░░░░░░░░▒▒
+
+
+                </pre>
+                <p>Here's the Winter Goat.</p>
+                <p>He says hi!</p>
+            </div>
+
 <script>
     function checkName() {
         const nameInput = document.getElementById('nameInput').value.trim();
@@ -70,6 +120,8 @@ description: Nathan Ryan's panoply puzzle for the holiday season.
         // Compare names case-insensitively
         if (nameInput.toLowerCase() === correctName.toLowerCase()) {
             document.getElementById('nextButton').style.display = 'inline'; // Show the next button
+            document.getElementById('asciiArt').style.display = 'block';
+
         } else {
             alert('Incorrect name. Try again.');
         }
