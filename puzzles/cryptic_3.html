@@ -1,0 +1,305 @@
+---
+layout: default
+title: Cryptic Crossword 3
+description: Nathan Ryan's Cryptic #3 Crossword puzzle.
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's The Big One puzzle.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+            table {
+            border-collapse: collapse;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            }
+            td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            }
+            .black {
+            background-color: black;
+            }
+            .clue {
+            float: left;
+            margin-right: 20px;
+            }
+            .clear {
+            clear: both;
+            }
+            .hidden {
+            display: none;
+            }
+        </style>
+        <script>
+            function fillCell(cell) {
+            const currentText = cell.innerText.trim();
+            if (currentText === '') {
+                cell.innerText = prompt('Enter a letter');
+            } else {
+                cell.innerText = '';
+            }
+            }
+
+            function checkAnswers() {
+            const cells = document.querySelectorAll('td:not(.black)');
+            const correctAnswers = ['B','R','A','I','N','S','T','O','R','M','Y','E','R','S','N','C','I','P','H','E','R','T','I','D','S','E','G','D','C','O','N','U','N','D','R','U','M','L','T','Y','A','E','E','P','A','R','A','D','O','X','I','C','C','R','Y','P','T','I','C'];
+
+            let allCorrect = true;
+            cells.forEach((cell, index) => {
+                if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
+                allCorrect = false;
+                cell.style.backgroundColor = 'red';
+                } else {
+                cell.style.backgroundColor = 'white';
+                }
+            });
+
+            if (allCorrect) {
+                document.getElementById('successMessage').classList.remove('hidden');
+            } else {
+                alert('Incorrect answers. Keep trying!');
+            }
+            }
+        </script>
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's Cryptic #3 Crossword puzzle.">
+            <a class="logo">Cryptic Crossword #3</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2026-01-04</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+    <h1>Cryptic Crossword 3</h1>
+    <p>A crossword that hates you.</p>
+    <div class="clue">
+      <b>Across</b><br>
+      1. Mental tempest, a storm of innovative ideas<br>
+      5. An encoding scheme, initially a continuous improvement plan for Joaquin Phoenix’s phone<br>
+      7. A Spanish with before starting the undoing of a drummer, a tangled question<br>
+      8. Prefixed beside on a liberal ox, a riddle in itself<br>
+      9. Tears because initially people talk in circles, challenging to discern
+    </div>
+    <div class="clue">
+      <b>Down</b><br>
+      2. My stereo without an executive order left on yes, secrecy<br>
+      3. Starting enigmatically in Massachusetts can be a perplexing puzzle<br>
+      4. A central volleyball offensive player I hear, an enigmatic puzzle<br>
+      6. Hidden coteries, obscure and cryptic
+    </div>
+    <div class="clear"></div>
+    <p></p>
+    <table style="color: black;">
+      <tr>
+        <td onclick="fillCell(this)">1</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">2</td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">3</td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">4</td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">3</td>
+      </tr>
+      <tr>
+        <td onclick="fillCell(this)">5</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)">6</td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">7</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">8</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td onclick="fillCell(this)">9</td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+      </tr>
+    </table>
+<p></p>
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <div id="successMessage" class="hidden">
+      Congratulations! You have completed the puzzle.
+    </div>
+
+    </body>
+</section>
+
+<div class="share-buttons">
+    <span style="margin-right: 5px;">Share: </span>
+    <button onclick="shareOnTwitter()">Twitter</button>
+    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+    <button onclick="shareOnFacebook()">Facebook</button>
+</div>
+<p></p>
