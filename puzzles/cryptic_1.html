@@ -35,37 +35,45 @@ description: Nathan Ryan's Cryptic #1 Crossword puzzle.
             .hidden {
             display: none;
             }
+            td[contenteditable]:focus {
+              outline: 2px solid blue;
+            }
         </style>
         <script>
-            function fillCell(cell) {
-            const currentText = cell.innerText.trim();
-            if (currentText === '') {
-                cell.innerText = prompt('Enter a letter');
-            } else {
-                cell.innerText = '';
+          document.addEventListener('input', function (e) {
+            if (e.target.tagName === 'TD' && e.target.isContentEditable) {
+              e.target.textContent =
+                e.target.textContent.replace(/[^a-zA-Z]/g, '')
+                                    .toUpperCase()
+                                    .slice(0, 1);
             }
-            }
+          });
 
             function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.black)');
             const correctAnswers = ['E','A','S','E','L','C','C','H','A','R','C','O','A','L','O','Y','M','L','G','L','A','Z','E','O','L','I','D','N','A','S','C','O','R','E','U','O','G','O','P','B','L','E','N','I','B','O','N','A','C','T','I','N','G','E','N','U','T','G','E'];
 
             let allCorrect = true;
+
             cells.forEach((cell, index) => {
-                if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
+              const value = cell.textContent
+                .replace(/[^A-Z]/gi, '')  // remove junk
+                .toUpperCase();
+
+              if (value !== correctAnswers[index]) {
                 allCorrect = false;
-                cell.style.backgroundColor = 'red';
-                } else {
-                cell.style.backgroundColor = 'white';
-                }
+                cell.style.backgroundColor = '#f7c5c5'; // red
+              } else {
+                cell.style.backgroundColor = '#c8f7c5'; // green
+              }
             });
 
             if (allCorrect) {
-                document.getElementById('successMessage').classList.remove('hidden');
+              document.getElementById('successMessage').classList.remove('hidden');
             } else {
-                alert('Incorrect answers. Keep trying!');
+              alert('Incorrect answers. Keep trying!');
             }
-            }
+          }
         </script>
     </header>
 </section>
@@ -135,11 +143,11 @@ description: Nathan Ryan's Cryptic #1 Crossword puzzle.
     <tr>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">1</td>
-        <td onclick="fillCell(this)">2</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">1</td>
+        <td contenteditable="true">2</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
@@ -149,7 +157,7 @@ description: Nathan Ryan's Cryptic #1 Crossword puzzle.
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
@@ -159,134 +167,134 @@ description: Nathan Ryan's Cryptic #1 Crossword puzzle.
         <td class="black"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)">3</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">3</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">4</td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true">4</td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">5</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">5</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">6</td>
+        <td contenteditable="true">6</td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">7</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">8</td>
+        <td contenteditable="true">7</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">8</td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-    </tr>
-    <tr>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
         <td class="black"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">9</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">9</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
     </tr>
     <tr>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
     </tr>
     </table>
     <p></p>

@@ -74,40 +74,7 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
               alert('Incorrect answers. Keep trying!');
             }
           }
-
         </script>
-
-        <!-- <script>
-            function fillCell(cell) {
-            const currentText = cell.innerText.trim();
-            if (currentText === '') {
-                cell.innerText = prompt('Enter a letter');
-            } else {
-                cell.innerText = '';
-            }
-            }
-
-            function checkAnswers() {
-            const cells = document.querySelectorAll('td:not(.black)');
-            const correctAnswers = ['B','R','A','I','N','S','T','O','R','M','Y','E','R','S','N','C','I','P','H','E','R','T','I','D','S','E','G','D','C','O','N','U','N','D','R','U','M','L','T','Y','A','E','E','P','A','R','A','D','O','X','I','C','R','Y','P','T','I','C'];
-
-            let allCorrect = true;
-            cells.forEach((cell, index) => {
-                if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
-                allCorrect = false;
-                cell.style.backgroundColor = 'red';
-                } else {
-                cell.style.backgroundColor = 'white';
-                }
-            });
-
-            if (allCorrect) {
-                document.getElementById('successMessage').classList.remove('hidden');
-            } else {
-                alert('Incorrect answers. Keep trying!');
-            }
-            }
-        </script> -->
     </header>
 </section>
 
