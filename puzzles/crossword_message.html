@@ -1,0 +1,461 @@
+---
+layout: default
+title: Tile Word Complete 3
+description: Nathan Ryan's Tile Puzzle #3.
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's Tile Puzzle.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+        <style>
+        table {
+        border-collapse: collapse;
+        margin: 20px auto;
+        }
+
+        td {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #000;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        }
+
+        td.black {
+        background: black;
+        }
+
+        .clue {
+            float: left;
+            margin-right: 20px;
+            }
+
+        td[contenteditable]:focus {
+        outline: 2px solid #4a90e2;
+        }
+
+        /* Circle styling */
+        td.circle {
+        position: relative;
+        }
+
+        td.circle::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        pointer-events: none;
+        }
+
+        /* Checking feedback */
+        .correct {
+        background-color: #c8f7c5;
+        }
+
+        .incorrect {
+        background-color: #f7c5c5;
+        }
+        </style>
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's Crossword puzzle.">
+            <a class="logo">Crossword</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Last updated: 2026-01-11</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+    <body>
+    <div class="clue">
+    <b>Across</b><br>
+    1. left after ease for painting<br>
+    3. burn cobalt and aluminum for artist’s rock<br>
+    5. left in gaze for a coat<br>
+    7. it is a to reward, and it is the for music<br>
+    9. performing some contract in Germany
+  </div>
+  <div class="clue">
+    <b>Down</b><br>
+    2. it is paint for the walls, and nails for the hands<br>
+    3. gluing materials, a barrage I hear<br>
+    4. speech, a sick tree upended Europe<br>
+    6. winning at adding music to video<br>
+    7. tonnes are upset by the poem<br>
+    8. narrative poem in steep ichor<br>
+    </div>
+    <div class="clear"></div>
+    <p></p>
+    <table>
+    <!-- Row 1 -->
+    <tr>
+        <td contenteditable data-answer="T">T</td>
+        <td contenteditable data-answer="R"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="circle" contenteditable data-answer="T"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="H"></td>
+        <td contenteditable data-answer="O"></td>
+        <td class="circle" contenteditable data-answer="W"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="F"></td>
+        <td contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="F"></td>
+        <td contenteditable data-answer="E"></td>
+    </tr>
+
+    <!-- Row 2 -->
+    <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="W"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="H"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="N"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+    </tr>
+
+    <!-- Row 3 -->
+    <tr>
+        <td contenteditable data-answer="L"></td>
+        <td class="circle" contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="circle" contenteditable data-answer="L"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="C"></td>
+        <td contenteditable data-answer="I"></td>
+        <td class="circle" contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="Y"></td>
+    </tr>
+
+    <!-- Row 4 -->
+    <tr>
+        <td contenteditable data-answer="I"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="circle" contenteditable data-answer="Y"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="B"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="T"></td>
+        <td class="circle" contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="U"></td>
+        <td contenteditable data-answer="P"></td>
+    </tr>
+
+    <!-- Row 5 -->
+    <tr>
+        <td contenteditable data-answer="T"></td>
+        <td class="black"></td>
+        <td class="circle" contenteditable data-answer="U"></td>
+        <td contenteditable data-answer="T"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="circle" contenteditable data-answer="R"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="L"></td>
+        <td class="circle" contenteditable data-answer="U"></td>
+        <td contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="C"></td>
+        <td contenteditable data-answer="E"></td>
+    </tr>
+
+    <!-- Row 6 -->
+    <tr>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="S"></td>
+        <td class="circle" contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="S"></td>
+    </tr>
+
+    <!-- Row 7 -->
+    <tr>
+        <td contenteditable data-answer="N"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="B"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="R"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="N"></td>
+        <td contenteditable data-answer="D"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+    </tr>
+
+    <!-- Row 8 -->
+    <tr>
+        <td contenteditable data-answer="Y"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="M"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="M"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="T"></td>
+        <td contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="N"></td>
+        <td contenteditable data-answer="G"></td>
+        <td class="black"></td>
+    </tr>
+
+    <!-- Row 9 -->
+    <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="S"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="P"></td>
+        <td contenteditable data-answer="G"></td>
+        <td contenteditable data-answer="H"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+    </tr>
+
+    <!-- Row 10 -->
+    <tr>
+        <td class="black"></td>
+        <td contenteditable data-answer="D"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="R"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="T"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="R"></td>
+    </tr>
+
+    <!-- Row 11 -->
+    <tr>
+        <td contenteditable data-answer="D"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="N"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="T"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="R"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+    </tr>
+
+    <!-- Row 12 -->
+    <tr>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="R"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="R"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="E"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="O"></td>
+        <td contenteditable data-answer="N"></td>
+        <td contenteditable data-answer="S"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="D"></td>
+    </tr>
+
+    <!-- Row 13 -->
+    <tr>
+        <td class="black"></td>
+        <td contenteditable data-answer="M"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="M"></td>
+        <td contenteditable data-answer="A"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="Y"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+    </tr>
+
+    <!-- Row 14 -->
+    <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="P"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="L"></td>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="D"></td>
+        <td contenteditable data-answer="I"></td>
+        <td contenteditable data-answer="N"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="E"></td>
+    </tr>
+
+    <!-- Row 15 -->
+    <tr>
+        <td contenteditable data-answer="A"></td>
+        <td contenteditable data-answer="B"></td>
+        <td contenteditable data-answer="Y"></td>
+        <td contenteditable data-answer="S"></td>
+        <td contenteditable data-answer="S"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable data-answer="A"></td>
+    </tr>
+
+
+    </table>
+
+<button onclick="checkAnswers()">Check Answers</button>
+
+<script>
+document.addEventListener('input', e => {
+  if (e.target.tagName === 'TD' && e.target.isContentEditable) {
+    e.target.textContent = e.target.textContent
+      .replace(/[^A-Z]/gi, '')
+      .toUpperCase()
+      .slice(0, 1);
+  }
+});
+
+function checkAnswers() {
+  const cells = document.querySelectorAll('td[data-answer]');
+  let allCorrect = true;
+
+  cells.forEach(cell => {
+    const entered = cell.textContent.trim().toUpperCase();
+    const correct = cell.dataset.answer;
+
+    cell.classList.remove('correct', 'incorrect');
+
+    if (entered === '') {
+      allCorrect = false;
+      return;
+    }
+
+    if (entered === correct) {
+      cell.classList.add('correct');
+    } else {
+      cell.classList.add('incorrect');
+      allCorrect = false;
+    }
+  });
+
+  if (allCorrect) {
+    alert('Puzzle complete!');
+  }
+}
+</script>
+
+</body>
+    </div>
+</div>
+</section>
