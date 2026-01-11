@@ -38,29 +38,46 @@ description: Nathan Ryan's Tile Puzzle #2.
             .hidden {
             display: none;
             }
+            td[contenteditable]:focus {
+              outline: 2px solid blue;
+            }
         </style>
         <script>
-            function fillCell(cell) {
-            const currentText = cell.innerText.trim();
-            if (currentText === '') {
-                cell.innerText = prompt('Enter a letter');
-            } else {
-                cell.innerText = '';
+          document.addEventListener('input', function (e) {
+            if (e.target.tagName === 'TD' && e.target.isContentEditable) {
+              e.target.textContent =
+                e.target.textContent.replace(/[^a-zA-Z]/g, '')
+                                    .toUpperCase()
+                                    .slice(0, 1);
             }
-            }
-
+          });
             function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.empty)');
             const correctAnswers = ['L','S','T','E','E','R','A','G','E','E','E','R','B','A','T','T','E','R','I','E','S','A','T','E','T','E','T','U','G','R','E','A','T','E','S','T','I','E','L','T','R','M','E','O','A','W','U','T','R','E','A','T','I','S','E','T','T','R','E', 'T', 'R', 'E', 'A','T','S','R','R'];
 
             let allCorrect = true;
+
             cells.forEach((cell, index) => {
-                if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
+              const value = cell.textContent
+                .replace(/[^A-Z]/gi, '')
+                .toUpperCase();
+
+              // EMPTY CELL → ignore
+              if (value === '') {
+                cell.style.backgroundColor = '';
                 allCorrect = false;
-                cell.style.backgroundColor = 'white';
-                } else {
-                cell.style.backgroundColor = 'green';
-                }
+                return;
+              }
+
+              // WRONG LETTER
+              if (value !== correctAnswers[index]) {
+                cell.style.backgroundColor = '#f7c5c5';
+                allCorrect = false;
+              }
+              // CORRECT LETTER
+              else {
+                cell.style.backgroundColor = '#c8f7c5';
+              }
             });
 
             if (allCorrect) {
@@ -162,186 +179,186 @@ description: Nathan Ryan's Tile Puzzle #2.
     <p></p>
     <table style="color: black;">
       <tr> <!-- First -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">T</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">R</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">T</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">R</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr><!-- Second -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">R</td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">R</td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- Third -->
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">I</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">I</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- Fourth -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- Fifth -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">U</td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">U</td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- Sixth -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">A</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">A</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- Seventh -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">L</td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">L</td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- 8 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">R</td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">R</td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- 9 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">A</td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">A</td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- 10 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">R</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">R</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr> <!-- 11 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">T</td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">T</td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- 12 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">S</td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">S</td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
       <tr> <!-- 13 -->
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">R</td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
-        <td class="empty" onclick="fillCell(this)"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true">R</td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
+        <td class="empty" contenteditable="true"></td>
       </tr>
     </table>
 <p></p>
