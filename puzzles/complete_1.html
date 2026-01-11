@@ -52,22 +52,40 @@ description: Nathan Ryan's first tile puzzle.
             }
           });
 
-            function checkAnswers() {
+          function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.empty)');
-            const correctAnswers = ['P','B','O','O','K','K','E','E','P','E','R','O','E','E','S','U','C','C','E','S','S','F','U','L','L','Y','B','S','K','E','E','B','E','E','H','I','V','E','L','S','E','L','S','P','S','I','I','E','P','W','O','O','F','R','E','E','Z','E','R','U','N','P','E','S','P','T','N','E','E','E','R','N','S','E','S','W','H','E','E','L','B','A','R','R','O','W'];
+            const correctAnswers = [
+              'P','B','O','O','K','K','E','E','P','E','R',
+              'O','E','E','S','U','C','C','E','S','S','F','U','L','L','Y',
+              'B','S','K','E','E','B','E','E','H','I','V','E',
+              'L','S','E','L','S','P','S','I','I','E',
+              'P','W','O','O','F','R','E','E','Z','E','R',
+              'U','N','P','E','S','P','T','N','E','E','E','R','N','S',
+              'E','S','W','H','E','E','L','B','A','R','R','O','W'
+            ];
 
             let allCorrect = true;
 
             cells.forEach((cell, index) => {
               const value = cell.textContent
-                .replace(/[^A-Z]/gi, '')  // remove junk
+                .replace(/[^A-Z]/gi, '')
                 .toUpperCase();
 
-              if (value !== correctAnswers[index]) {
+              // EMPTY CELL → ignore
+              if (value === '') {
+                cell.style.backgroundColor = '';
                 allCorrect = false;
-                cell.style.backgroundColor = '#f7c5c5'; // red
-              } else {
-                cell.style.backgroundColor = '#c8f7c5'; // green
+                return;
+              }
+
+              // WRONG LETTER
+              if (value !== correctAnswers[index]) {
+                cell.style.backgroundColor = '#f7c5c5';
+                allCorrect = false;
+              }
+              // CORRECT LETTER
+              else {
+                cell.style.backgroundColor = '#c8f7c5';
               }
             });
 
@@ -77,6 +95,7 @@ description: Nathan Ryan's first tile puzzle.
               alert('Incorrect answers. Keep trying!');
             }
           }
+
         </script>
     </header>
 </section>
