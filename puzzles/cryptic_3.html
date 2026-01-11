@@ -51,16 +51,20 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
 
           function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.black)');
-            const correctAnswers = ['B','R','A','I','N', ... ];
+            const correctAnswers = ['B','R','A','I','N','S','T','O','R','M','Y','E','R','S','N','C','I','P','H','E','R','T','I','D','S','E','G','D','C','O','N','U','N','D','R','U','M','L','T','Y','A','E','E','P','A','R','A','D','O','X','I','C','R','Y','P','T','I','C'];
 
             let allCorrect = true;
 
             cells.forEach((cell, index) => {
-              if (cell.innerText.toUpperCase() !== correctAnswers[index]) {
+              const value = cell.textContent
+                .replace(/[^A-Z]/gi, '')  // remove junk
+                .toUpperCase();
+
+              if (value !== correctAnswers[index]) {
                 allCorrect = false;
-                cell.style.backgroundColor = 'red';
+                cell.style.backgroundColor = '#f7c5c5'; // red
               } else {
-                cell.style.backgroundColor = 'white';
+                cell.style.backgroundColor = '#c8f7c5'; // green
               }
             });
 
@@ -70,6 +74,7 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
               alert('Incorrect answers. Keep trying!');
             }
           }
+
         </script>
 
         <!-- <script>
