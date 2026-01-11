@@ -35,60 +35,19 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
             .hidden {
             display: none;
             }
-            td.selected {
+            td[contenteditable]:focus {
               outline: 2px solid blue;
             }
         </style>
         <script>
-          let selectedCell = null;
-
-          // Select a cell on click
-          function fillCell(cell) {
-            if (cell.classList.contains('black')) return;
-
-            if (selectedCell) {
-              selectedCell.classList.remove('selected');
-            }
-
-            selectedCell = cell;
-            selectedCell.classList.add('selected');
-          }
-
-          // Listen for keyboard input
-          document.addEventListener('keydown', function (e) {
-            if (!selectedCell) return;
-
-            // Letters A–Z
-            if (e.key.length === 1 && e.key.match(/[a-z]/i)) {
-              selectedCell.innerText = e.key.toUpperCase();
-              moveToNextCell();
-            }
-
-            // Backspace clears
-            if (e.key === 'Backspace') {
-              selectedCell.innerText = '';
-              moveToPreviousCell();
-              e.preventDefault();
+          document.addEventListener('input', function (e) {
+            if (e.target.tagName === 'TD' && e.target.isContentEditable) {
+              e.target.textContent =
+                e.target.textContent.replace(/[^a-zA-Z]/g, '')
+                                    .toUpperCase()
+                                    .slice(0, 1);
             }
           });
-
-          // Move to next non-black cell (simple left-to-right)
-          function moveToNextCell() {
-            const cells = Array.from(document.querySelectorAll('td:not(.black)'));
-            const index = cells.indexOf(selectedCell);
-            if (index >= 0 && index < cells.length - 1) {
-              fillCell(cells[index + 1]);
-            }
-          }
-
-          // Move to previous non-black cell
-          function moveToPreviousCell() {
-            const cells = Array.from(document.querySelectorAll('td:not(.black)'));
-            const index = cells.indexOf(selectedCell);
-            if (index > 0) {
-              fillCell(cells[index - 1]);
-            }
-          }
 
           function checkAnswers() {
             const cells = document.querySelectorAll('td:not(.black)');
@@ -209,16 +168,16 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
     <p></p>
     <table style="color: black;">
       <tr>
-        <td onclick="fillCell(this)">1</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">2</td>
+        <td contenteditable="true">1</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">2</td>
         <td class="black"></td>
         <td class="black"></td>
       </tr>
@@ -232,13 +191,13 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">3</td>
+        <td contenteditable="true">3</td>
       </tr>
       <tr>
         <td class="black"></td>
-        <td onclick="fillCell(this)">4</td>
+        <td contenteditable="true">4</td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
@@ -246,100 +205,72 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
-        <td onclick="fillCell(this)">5</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)">6</td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">5</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">6</td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-      </tr>
-      <tr>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">7</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true">7</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
         <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)">8</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td class="black"></td>
-      </tr>
-      <tr>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td class="black"></td>
-        <td onclick="fillCell(this)"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
         <td class="black"></td>
@@ -351,15 +282,43 @@ description: Nathan Ryan's Cryptic #3 Crossword puzzle.
       <tr>
         <td class="black"></td>
         <td class="black"></td>
+        <td contenteditable="true">8</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
         <td class="black"></td>
-        <td onclick="fillCell(this)">9</td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
-        <td onclick="fillCell(this)"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td contenteditable="true">9</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         <td class="black"></td>
       </tr>
     </table>
