@@ -60,6 +60,29 @@ description: Nathan Ryan's Crossword with a message.
         .incorrect {
         background-color: #f7c5c5;
         }
+
+        .bonus-row {
+        margin: 10px 0;
+        }
+
+        .bonus-input {
+        width: 80px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 5px;
+        padding: 5px;
+        }
+
+        .bonus-input.correct {
+        background-color: #c8f7c5;
+        }
+
+        .bonus-input.incorrect {
+        background-color: #f7c5c5;
+        }
+
         </style>
     </header>
 </section>
@@ -178,7 +201,7 @@ description: Nathan Ryan's Crossword with a message.
             <td class="circle" contenteditable data-answer="W">6</td>
             <td class="black"></td>
             <td contenteditable data-answer="F">7</td>
-            <td contenteditable data-answer="I"></td>
+            <td class="circle" contenteditable data-answer="I"></td>
             <td contenteditable data-answer="F"></td>
             <td contenteditable data-answer="E"></td>
         </tr>
@@ -204,8 +227,8 @@ description: Nathan Ryan's Crossword with a message.
 
         <!-- Row 3 -->
         <tr>
-            <td contenteditable data-answer="L">9</td>
-            <td class="circle" contenteditable data-answer="I"></td>
+            <td class="circle" contenteditable data-answer="L">9</td>
+            <td contenteditable data-answer="I"></td>
             <td contenteditable data-answer="S"></td>
             <td contenteditable data-answer="A"></td>
             <td class="black"></td>
@@ -213,11 +236,11 @@ description: Nathan Ryan's Crossword with a message.
             <td contenteditable data-answer="E"></td>
             <td class="circle" contenteditable data-answer="L"></td>
             <td class="black"></td>
-            <td contenteditable data-answer="S">11</td>
+            <td class="circle" contenteditable data-answer="S">11</td>
             <td contenteditable data-answer="I">12</td>
             <td contenteditable data-answer="C">13</td>
             <td contenteditable data-answer="I">14</td>
-            <td class="circle" contenteditable data-answer="L">15</td>
+            <td contenteditable data-answer="L">15</td>
             <td contenteditable data-answer="Y">16</td>
         </tr>
 
@@ -405,7 +428,6 @@ description: Nathan Ryan's Crossword with a message.
             <td class="black"></td>
             <td class="black"></td>
             <td class="black"></td>
-            <td class="black"></td>
             <td class="circle" contenteditable data-answer="Y"></td>
             <td class="black"></td>
             <td class="black"></td>
@@ -463,31 +485,113 @@ description: Nathan Ryan's Crossword with a message.
         });
 
         function checkAnswers() {
-        const cells = document.querySelectorAll('td[data-answer]');
-        let allCorrect = true;
+            let allCorrect = true;
 
-        cells.forEach(cell => {
-            const entered = cell.textContent.trim().toUpperCase();
-            const correct = cell.dataset.answer;
+            const cells = document.querySelectorAll('td[data-answer]');
+            cells.forEach(cell => {
+                const entered = cell.textContent.trim().toUpperCase();
+                const correct = cell.dataset.answer.toUpperCase();
 
-            cell.classList.remove('correct', 'incorrect');
+                cell.classList.remove('correct', 'incorrect');
 
-            if (entered === '') {
-            allCorrect = false;
-            return;
+                if (entered === '') {
+                allCorrect = false;
+                return;
+                }
+
+                if (entered === correct) {
+                cell.classList.add('correct');
+                } else {
+                cell.classList.add('incorrect');
+                allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                alert('Crossword complete!');
             }
 
-            if (entered === correct) {
-            cell.classList.add('correct');
-            } else {
-            cell.classList.add('incorrect');
-            allCorrect = false;
-            }
-        });
+            const rows = document.querySelectorAll('.bonus-row');
+            for (let i = 0; i < rows.length; i++) {
+                const inputs = rows[i].querySelectorAll('.bonus-input');
+                let rowCorrect = true;
 
-        if (allCorrect) {
-            alert('Puzzle complete!');
-        }
-        }
+                inputs.forEach(input => {
+                const val = input.value.trim().toUpperCase();
+                const answer = input.dataset.answer.toUpperCase();
+
+                input.classList.remove('correct', 'incorrect');
+
+                if (val === answer) {
+                    input.classList.add('correct');
+                } else {
+                    input.classList.add('incorrect');
+                    rowCorrect = false;
+                }
+                });
+
+                if (rowCorrect && i < rows.length - 1) {
+                rows[i + 1].style.display = 'block';
+                }
+
+                if (!rowCorrect) break;
+            }
+
+            const lastRow = rows[rows.length - 1];
+            const lastInputs = lastRow.querySelectorAll('.bonus-input');
+            const lastCorrect = Array.from(lastInputs).every(input => input.value.trim().toUpperCase() === input.dataset.answer.toUpperCase());
+            if (lastCorrect) {
+                alert('Bonus puzzle complete!');
+            }
+            }
     </script>
+</section>
+
+<section id="bonus-section" style="text-align:center; margin-top:40px;">
+  <!-- Row 1 -->
+  <div class="bonus-row" data-row="1">
+    <input type="text" class="bonus-input" data-answer="TWILLS" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="YOUR" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="UNBEND" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="ARMY" placeholder="?" maxlength="10">
+  </div>
+
+  <!-- Row 2 (hidden initially) -->
+  <div class="bonus-row" data-row="2" style="display:none;">
+    <input type="text" class="bonus-input" data-answer="TWILL" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="UBEND" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="AMY" placeholder="?" maxlength="10">
+  </div>
+
+  <!-- Row 3 -->
+  <div class="bonus-row" data-row="3" style="display:none;">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="BEND" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+  </div>
+
+  <!-- Row 4 -->
+  <div class="bonus-row" data-row="4" style="display:none;">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="BEN" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+  </div>
+
+  <!-- Row 5 -->
+  <div class="bonus-row" data-row="5" style="display:none;">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="BE" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+  </div>
+
+  <!-- Final Row -->
+  <div class="bonus-row" data-row="6" style="display:none;">
+    <input type="text" class="bonus-input" data-answer="VALENTINE" placeholder="?" maxlength="20">
+  </div>
+
+  <button onclick="checkBonusRows()">Check Bonus</button>
 </section>
