@@ -62,17 +62,19 @@ description: Nathan Ryan's Crossword with a message.
         }
 
         .bonus-row {
+        display: grid;
+        grid-template-columns: repeat(4, 120px);
+        gap: 10px;
+        justify-content: center;
         margin: 10px 0;
         }
 
         .bonus-input {
-        width: 80px;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
         text-align: center;
-        margin: 0 5px;
+        font-size: 18px;
         padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
         }
 
         .bonus-input.correct {
@@ -431,6 +433,7 @@ description: Nathan Ryan's Crossword with a message.
             <td class="circle" contenteditable data-answer="Y"></td>
             <td class="black"></td>
             <td class="black"></td>
+            <td contenteditable data-answer="A"></td>
         </tr>
 
         <!-- Row 14 -->
@@ -547,7 +550,7 @@ description: Nathan Ryan's Crossword with a message.
     </script>
 </section>
 
-<section id="bonus-section" style="text-align:center; margin-top:40px;">
+<section id="bonus-section" style="text-align:center; margin-top:40px; display: none;">
   <!-- Row 1 -->
   <div class="bonus-row" data-row="1">
     <input type="text" class="bonus-input" data-answer="TWILLS" placeholder="?" maxlength="10">
