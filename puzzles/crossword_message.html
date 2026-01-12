@@ -475,7 +475,7 @@ description: Nathan Ryan's Crossword with a message.
         </tr>
     </table>
 
-    <button onclick="checkAnswers()">Check Answers</button>
+    <button onclick="checkCrossword()">Check Answers</button>
 
     <script>
         document.addEventListener('input', e => {
@@ -487,7 +487,7 @@ description: Nathan Ryan's Crossword with a message.
         }
         });
 
-        function checkAnswers() {
+        function checkCrossword() {
             let allCorrect = true;
 
             const cells = document.querySelectorAll('td[data-answer]');
@@ -498,15 +498,15 @@ description: Nathan Ryan's Crossword with a message.
                 cell.classList.remove('correct', 'incorrect');
 
                 if (entered === '') {
-                allCorrect = false;
-                return;
+                    allCorrect = false;
+                    return;
                 }
 
                 if (entered === correct) {
-                cell.classList.add('correct');
+                    cell.classList.add('correct');
                 } else {
-                cell.classList.add('incorrect');
-                allCorrect = false;
+                    cell.classList.add('incorrect');
+                    allCorrect = false;
                 }
             });
 
@@ -515,39 +515,9 @@ description: Nathan Ryan's Crossword with a message.
                 document.getElementById('bonus-section').style.display = 'block';
             }
 
-            const rows = document.querySelectorAll('.bonus-row');
-            for (let i = 0; i < rows.length; i++) {
-                const inputs = rows[i].querySelectorAll('.bonus-input');
-                let rowCorrect = true;
+            return allCorrect;
+        }
 
-                inputs.forEach(input => {
-                const val = input.value.trim().toUpperCase();
-                const answer = input.dataset.answer.toUpperCase();
-
-                input.classList.remove('correct', 'incorrect');
-
-                if (val === answer) {
-                    input.classList.add('correct');
-                } else {
-                    input.classList.add('incorrect');
-                    rowCorrect = false;
-                }
-                });
-
-                if (rowCorrect && i < rows.length - 1) {
-                rows[i + 1].style.display = 'block';
-                }
-
-                if (!rowCorrect) break;
-            }
-
-            const lastRow = rows[rows.length - 1];
-            const lastInputs = lastRow.querySelectorAll('.bonus-input');
-            const lastCorrect = Array.from(lastInputs).every(input => input.value.trim().toUpperCase() === input.dataset.answer.toUpperCase());
-            if (lastCorrect) {
-                alert('Bonus puzzle complete!');
-            }
-            }
     </script>
 </section>
 
@@ -597,5 +567,40 @@ description: Nathan Ryan's Crossword with a message.
     <input type="text" class="bonus-input" data-answer="VALENTINE" placeholder="?" maxlength="9">
   </div>
 
-  <button onclick="checkAnswers()">Check Bonus</button>
+  <button onclick="checkBonus()">Check Bonus</button>
+
+  <script>
+    function checkBonus() {
+        const rows = document.querySelectorAll('.bonus-row');
+
+        for (let i = 0; i < rows.length; i++) {
+            const inputs = rows[i].querySelectorAll('.bonus-input');
+            let rowCorrect = true;
+
+            inputs.forEach(input => {
+                const val = input.value.trim().toUpperCase();
+                const answer = input.dataset.answer.toUpperCase();
+
+                input.classList.remove('correct', 'incorrect');
+
+                if (val === answer) {
+                    input.classList.add('correct');
+                } else {
+                    input.classList.add('incorrect');
+                    rowCorrect = false;
+                }
+            });
+
+            // Reveal next row only if this row is correct
+            if (rowCorrect && i < rows.length - 1) {
+                rows[i + 1].style.display = 'grid';
+            }
+
+            if (!rowCorrect) return;
+        }
+
+        alert('Happy Valentine\'s Day!');
+    }
+
+  </script>
 </section>
