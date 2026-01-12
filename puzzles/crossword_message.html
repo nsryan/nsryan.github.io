@@ -474,7 +474,7 @@ description: Nathan Ryan's Crossword with a message.
             <td contenteditable data-answer="A"></td>
         </tr>
     </table>
-
+    <p></p>
     <button onclick="checkCrossword()">Check Answers</button>
 
     <script>
@@ -522,6 +522,8 @@ description: Nathan Ryan's Crossword with a message.
 </section>
 
 <section id="bonus-section" style="text-align:center; margin-top:40px; display: none;">
+    <p>Sometimes we have to remove pesky pixels to see the bigger picture.</p>
+    <p></p>
   <!-- Row 1 -->
   <div class="bonus-row" data-row="1">
     <input type="text" class="bonus-input" data-answer="TWILLS" placeholder="?" maxlength="10">
@@ -540,26 +542,26 @@ description: Nathan Ryan's Crossword with a message.
 
   <!-- Row 3 -->
   <div class="bonus-row" data-row="3" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="WILL" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="YOU" maxlength="3">
     <input type="text" class="bonus-input" data-answer="BEND" placeholder="?" maxlength="4">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="MY" maxlength="2">
   </div>
 
   <!-- Row 4 -->
   <div class="bonus-row" data-row="4" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="WILL" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="YOU" maxlength="3">
     <input type="text" class="bonus-input" data-answer="BEN" placeholder="?" maxlength="3">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="MY" maxlength="2">
   </div>
 
   <!-- Row 5 -->
   <div class="bonus-row" data-row="5" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="WILL" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="YOU" maxlength="3">
     <input type="text" class="bonus-input" data-answer="BE" placeholder="?" maxlength="2">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="MY" maxlength="2">
   </div>
 
   <!-- Final Row -->
@@ -576,12 +578,19 @@ description: Nathan Ryan's Crossword with a message.
         for (let i = 0; i < rows.length; i++) {
             const inputs = rows[i].querySelectorAll('.bonus-input');
             let rowCorrect = true;
+            let rowComplete = true;
 
             inputs.forEach(input => {
                 const val = input.value.trim().toUpperCase();
                 const answer = input.dataset.answer.toUpperCase();
 
                 input.classList.remove('correct', 'incorrect');
+
+                if (val === '') {
+                    rowCorrect = false;
+                    rowComplete = false;
+                    return;
+                }
 
                 if (val === answer) {
                     input.classList.add('correct');
@@ -591,16 +600,18 @@ description: Nathan Ryan's Crossword with a message.
                 }
             });
 
-            // Reveal next row only if this row is correct
-            if (rowCorrect && i < rows.length - 1) {
+            // Only reveal next row if ALL inputs are filled AND correct
+            if (rowCorrect && rowComplete && i < rows.length - 1) {
                 rows[i + 1].style.display = 'grid';
             }
 
-            if (!rowCorrect) return;
+            // Stop checking further rows until this one is done
+            if (!rowCorrect || !rowComplete) return;
         }
 
-        alert('Happy Valentine\'s Day!');
+        alert("Happy Valentine's Day!");
     }
+
 
   </script>
 </section>
