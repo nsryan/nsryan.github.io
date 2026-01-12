@@ -512,6 +512,7 @@ description: Nathan Ryan's Crossword with a message.
 
             if (allCorrect) {
                 alert('Crossword complete! Now use the circled pieces to find the hidden phrase.');
+                document.getElementById('bonus-section').style.display = 'block';
             }
 
             const rows = document.querySelectorAll('.bonus-row');
@@ -561,40 +562,40 @@ description: Nathan Ryan's Crossword with a message.
 
   <!-- Row 2 (hidden initially) -->
   <div class="bonus-row" data-row="2" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="TWILL" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="UBEND" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="AMY" placeholder="?" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="TWILL" placeholder="?" maxlength="5">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="?" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="UBEND" placeholder="?" maxlength="5">
+    <input type="text" class="bonus-input" data-answer="AMY" placeholder="?" maxlength="3">
   </div>
 
   <!-- Row 3 -->
   <div class="bonus-row" data-row="3" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="BEND" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="BEND" placeholder="?" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
   </div>
 
   <!-- Row 4 -->
   <div class="bonus-row" data-row="4" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="BEN" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="BEN" placeholder="?" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
   </div>
 
   <!-- Row 5 -->
   <div class="bonus-row" data-row="5" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="BE" placeholder="?" maxlength="10">
-    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="10">
+    <input type="text" class="bonus-input" data-answer="WILL" placeholder="Will" maxlength="4">
+    <input type="text" class="bonus-input" data-answer="YOU" placeholder="You" maxlength="3">
+    <input type="text" class="bonus-input" data-answer="BE" placeholder="?" maxlength="2">
+    <input type="text" class="bonus-input" data-answer="MY" placeholder="My" maxlength="2">
   </div>
 
   <!-- Final Row -->
   <div class="bonus-row" data-row="6" style="display:none;">
-    <input type="text" class="bonus-input" data-answer="VALENTINE" placeholder="?" maxlength="20">
+    <input type="text" class="bonus-input" data-answer="VALENTINE" placeholder="?" maxlength="9">
   </div>
 
-  <button onclick="checkBonusRows()">Check Bonus</button>
+  <button onclick="checkAnswers()">Check Bonus</button>
 </section>
