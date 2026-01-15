@@ -1,0 +1,66 @@
+---
+layout: default
+title: TITLE
+description: Nathan Ryan's TITLE puzzle.
+---
+
+<section>
+    <header class="main">
+        <meta name="description" content="Nathan Ryan's TITLE puzzle.">
+        <meta name="keywords" content="Nathan, Nathan Ryan, puzzle, trick, word play, words, numbers, sudoku, word search, word ladder, number game, adding, challenge, personal, fun, game, ready, play">
+    </header>
+</section>
+
+<!-- Content -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <meta name="description" content="Nathan Ryan's TITLE puzzle.">
+            <a class="logo">TITLE</a>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <p>By: Nathan Ryan</p>
+                <p>Created: Date</p>
+                <p>Last Updated: Date</p>
+                <p>Brief description of the puzzle goes here.</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPageURL = window.location.href;
+
+    function shareOnTwitter() {
+        var textToTweet = "Check out this puzzle by @nathan_ryancz";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://twitter.com/intent/tweet?text=' + textToTweet + '&url=' + url, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+        var textToLinkedIn = "Check out this puzzle!";
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url + '&text=' + textToLinkedIn, '_blank');
+    }
+
+    function shareOnFacebook() {
+        var url = encodeURIComponent(currentPageURL);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+    }
+</script>
+
+<section>
+    <p>Content for the puzzle goes here.</p>
+</section>
+
+<div class="share-buttons">
+    <span style="margin-right: 5px;">Share: </span>
+    <button onclick="shareOnTwitter()">Twitter</button>
+    <button onclick="shareOnLinkedIn()">LinkedIn</button>
+    <button onclick="shareOnFacebook()">Facebook</button>
+</div>
+<p></p>
